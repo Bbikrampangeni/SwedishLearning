@@ -63,7 +63,6 @@ public class Comic_Manager : MonoBehaviour {
                 gameObject.GetComponent<BoxCollider2D>().enabled = false;
             else if(temp.a >= 0.9)
                 gameObject.GetComponent<BoxCollider2D>().enabled = true;
-            Debug.Log(temp.a);
         }
     }
 }
