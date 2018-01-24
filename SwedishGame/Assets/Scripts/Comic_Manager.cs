@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Comic_Manager : MonoBehaviour {
 
@@ -18,7 +19,6 @@ public class Comic_Manager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
         if (isTrigger)
         {
             Canvas.SetActive(true);
@@ -33,6 +33,16 @@ public class Comic_Manager : MonoBehaviour {
             TransparentLerp(1);
         }
 	}
+
+    public void NextFrame()
+    {
+
+        Vector3 position1 = GameObject.Find("Object1").GetComponent<Transform>().position;
+    }
+    public void LoadNextScene()
+    {
+        SceneManager.LoadScene("ComicSystem2");
+    }
 
     private void CameraLerp(float fromCamSize, float toCamSize, Vector3 fromPosition, Vector3 toPosition)
     {
@@ -52,7 +62,7 @@ public class Comic_Manager : MonoBehaviour {
         {
             Color gameObjectColor = gameObject.GetComponent<SpriteRenderer>().material.color;
             Color temp = gameObject.GetComponent<SpriteRenderer>().material.color;
-            temp.a = Mathf.Lerp(gameObjectColor.a, to, 1f * Time.deltaTime);            
+            temp.a = Mathf.Lerp(gameObjectColor.a, to, 1f * Time.deltaTime);
             
             if (gameObject.name != gameOjectName)
             {
