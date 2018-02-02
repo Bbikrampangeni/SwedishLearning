@@ -9,6 +9,8 @@ public class CrosswordManager : MonoBehaviour {
     public GameObject DownHints;
     public GameObject DisplayHint;
     public GameObject InputBox;
+    public GameObject ResultCanvas;
+
     public static string TheWord = "";
     public static string WordPosition = "";
 
@@ -16,6 +18,7 @@ public class CrosswordManager : MonoBehaviour {
     public static bool isPressed = true;
     public static int LengthOfWord = 0;
     private string WorkOnNewWord;
+    private bool isWordCorrectClick = false;
 
 	void Start () {
         CreateInputBox(LengthOfWord);
@@ -27,6 +30,7 @@ public class CrosswordManager : MonoBehaviour {
         {
             DeletePriviousTextBox();
             CreateInputBox(LengthOfWord);
+            isWordCorrectClick = false;
         }
         WorkOnNewWord = TheWord;
 
@@ -43,11 +47,43 @@ public class CrosswordManager : MonoBehaviour {
 
         DisplayHint.GetComponent<Text>().text = Hint;
         
-        SetCellColor();
+        UpdateCellColor();
         DisplayCharacterOnGrid();
         ToUpperCaseInputField();
+
         if (LengthOfWord != 0)
-            CheckSingleWord(LengthOfWord);
+        {
+            bool isCorrect = CheckSingleWord(LengthOfWord);           
+            DisplayResult(isCorrect, isWordCorrectClick);                     
+        }        
+            
+    }//Update()
+
+    private void DisplayResult(bool checkWord, bool checkCanvasActive)
+    {
+        if (checkCanvasActive)
+        {
+            ResultCanvas.SetActive(true);
+
+            GameObject correct = ResultCanvas.transform.GetChild(0).gameObject;
+            GameObject incorrect = ResultCanvas.transform.GetChild(1).gameObject;
+
+            if (checkWord)
+            {
+                correct.SetActive(true);
+                incorrect.SetActive(false);
+            }
+            else
+            {
+                correct.SetActive(false);
+                incorrect.SetActive(true);
+            }
+        }
+        else
+        {
+            ResultCanvas.SetActive(false);
+        }
+        
     }
 
     private bool CheckSingleWord(int length)
@@ -170,22 +206,37 @@ public class CrosswordManager : MonoBehaviour {
                 GenerateCrossword.ObjectArray[row + i, column].transform.GetChild(0).gameObject.GetComponent<Text>().text = text.GetComponentInChildren<Text>().text.ToUpper();
             }
         }
-
-
     }
 
-    private void SetCellColor()
+    private void UpdateCellColor()
     {
         GameObject[] go = GameObject.FindGameObjectsWithTag("Crossword");
-        
-        foreach(GameObject gameobject in go)
+        bool isWordCorrect = false;
+
+        if (LengthOfWord != 0)
+            isWordCorrect = CheckSingleWord(LengthOfWord);
+        foreach (GameObject gameobject in go)
         {
             if (gameobject.GetComponent<Check>().SaveChar != ' ' && TheWord != "")
             {
                 Image image = gameobject.GetComponent<Image>();
                 Check check = gameobject.GetComponent<Check>();
+
                 if (check.InAcross == TheWord || check.InDown == TheWord)
-                    image.color = Color.yellow;
+                {
+                    bool isCorrect = CheckSingleWord(LengthOfWord);
+
+                    if (!isWordCorrectClick)
+                        image.color = Color.yellow;
+                    else
+                    {
+                        if (isCorrect)                        
+                            image.color = Color.green;                        
+                        else
+                            image.color = Color.grey;
+                    }
+                }
+                    
                 else if (check.isCorrect == "true")
                     image.color = Color.green;
                 else if (check.isCorrect == "false")
@@ -211,11 +262,8 @@ public class CrosswordManager : MonoBehaviour {
 
         int row = 0;
         int column = 0;
-        if (WordPosition != "")
-        {
-            row = int.Parse(WordPosition.Substring(0, 2)) - 1;
-            column = int.Parse(WordPosition.Substring(3, 2)) - 1;
-        }
+
+        char lastLetter = ReturnPositionOfWord(ref row, ref column, WordPosition, length);
 
         if (length == 0)
         {
@@ -223,24 +271,49 @@ public class CrosswordManager : MonoBehaviour {
         }
         TextInput.GetComponent<RectTransform>().sizeDelta = new Vector2(cellSize.x * length, cellSize.y);       //create box
         
-        for (int i = 0; i < LengthOfWord; i++)
+        for (int i = 0; i < length; i++)
         {
             GameObject singleBox = Instantiate(InputBox, TextInput.transform);
 
-            if (WordPosition[WordPosition.Length - 1] == 'a')
+            if (lastLetter == 'a')
             {                
                 singleBox.GetComponent<InputField>().text = GenerateCrossword.ObjectArray[row, column + i].GetComponentInChildren<Text>().text;
             }
-            else if (WordPosition[WordPosition.Length - 1] == 'd')
+            else if (lastLetter == 'd')
             {
                 singleBox.GetComponent<InputField>().text = GenerateCrossword.ObjectArray[row + i, column].GetComponentInChildren<Text>().text;
             }
+        }        
+    }
+
+    private char ReturnPositionOfWord(ref int row, ref int column, string position, int WordLength)
+    {
+        row = 0;
+        column = 0;
+        char lastLetter = ' ';
+        if (WordPosition != "")
+        {
+            row = int.Parse(WordPosition.Substring(0, 2)) - 1;
+            column = int.Parse(WordPosition.Substring(3, 2)) - 1;
         }
 
-        
+        if(WordLength != 0)
+        {
+            if (position[position.Length - 1] == 'a')
+                lastLetter = 'a' ;
+            else
+                lastLetter = 'd';
+        }
+
+        return lastLetter;
     }
     public void CheckButtonPress()
     {
         isPressed = !isPressed;
+    }
+
+    public void CheckWordCorrectButton()
+    {
+        isWordCorrectClick = !isWordCorrectClick;
     }
 }
