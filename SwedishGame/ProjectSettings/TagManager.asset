@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Picture
+  - Crossword
   layers:
   - Default
   - TransparentFX

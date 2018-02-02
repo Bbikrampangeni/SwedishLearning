@@ -1,0 +1,11 @@
+01,01,a user-friendly Hint for user-friendly
+03,01,a access hint for access
+05,06,a scroll hint for scroll
+07,03,a operate hint for operate
+09,03,a keyboard hint for keyboard
+11,06,a function hint for function
+03,04,d equipped hint for equipped
+03,09,d store hint for store
+01,11,d display hint for display
+08,12,d memory hint for memory
+09,10,d data hint for data

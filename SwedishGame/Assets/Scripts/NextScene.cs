@@ -54,7 +54,7 @@ public class NextScene : MonoBehaviour {
         if (temp.a <= 0.2f)        
             newScene = false;        
 
-        if (temp.a >= 0.9 && !newScene)
+        if (temp.a >= 0.97 && !newScene)
             toNextScene = true;
         
         GetComponent<SpriteRenderer>().material.color = temp;
