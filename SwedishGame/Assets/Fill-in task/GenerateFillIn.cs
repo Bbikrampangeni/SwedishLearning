@@ -32,31 +32,25 @@ public class GenerateFillIn : MonoBehaviour {
 
     void Prune()
     {
-        for (int j = 0; j < words.Capacity; j++)
+        
+        for (int i = 0; i < words.Count; i++)
         {
-            if (words[j] == " ")
+            if (i % 2 == 0)
             {
-                words.Remove(words[j]);
-            }
-
-            for (int i = 0; i <= words.Capacity; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    Debug.Log("Keeping word");
-                    Debug.Log(i % 2);
-                    Debug.Log(words[i]);
+                Debug.Log("Keeping word");
+                Debug.Log(i % 2);
+                Debug.Log(words[i]);
                     
-                }
-                if (i % 2 == 1)
-                {
-                    Debug.Log("Remove word");
-                    Debug.Log(i % 2);
-                    Debug.Log(words[i]);
-                    words.Remove(words[i]);
-                }
-            } 
-        }
+            }
+            if (i % 2 != 0)
+            {
+                Debug.Log("Remove word");
+                Debug.Log(i % 2);
+                Debug.Log(words[i]);
+                words.Remove(words[i]);
+            }
+        } 
+        
     }
 
 }
