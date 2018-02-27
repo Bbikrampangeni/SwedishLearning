@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Picture
   - Crossword
+  - Option
   layers:
   - Default
   - TransparentFX

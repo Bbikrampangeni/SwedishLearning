@@ -7,32 +7,43 @@ using System;
 
 public class GenerateCrossword : MonoBehaviour {
 
+    public static GenerateCrossword _GenerateCrossword;
+
     public GameObject word;
     public static GameObject[,] ObjectArray;
 
     public int Column;
     public int Row;
+
     private int InRow;
     private int InColumn;
-
-    private char[,] words;
+        
     private string position = "";
-    private string Word = "";
+    private string Word = "";    
     private string originalText = "";
-    private string hint = "";
+    private string EnglishClue = "";
+    private string SwedishClue = "";
 
 
     private void Start()
     {       
         ObjectArray = new GameObject[Row, Column];
-        words = new char[Row, Column];
 
         SetPanleSize(Row, Column);
         GenerateGrid(Row, Column);
-        ReadAndLoadText();    
-        
-    }
+        ReadAndLoadText();
+
+        DisableInputField();
+    }    
     
+    void DisableInputField()
+    {
+        foreach (GameObject go in GameObject.FindGameObjectsWithTag("Crossword"))
+        {
+            if (go.GetComponent<Check>().SaveChar == ' ')
+                go.GetComponent<InputField>().enabled = false;
+        }
+    }
 
     void ReadAndLoadText()
     {
@@ -42,14 +53,13 @@ public class GenerateCrossword : MonoBehaviour {
         StreamReader reader = new StreamReader(path);
 
         while ((originalText = reader.ReadLine()) != null)
-        {
+        {            
+            int length = originalText.IndexOf("sweClue") -  originalText.IndexOf("engTrans");
 
             position = originalText.Substring(0, 7);
-            for (int j = 0; originalText[j + 8] != ' '; j++)
-            {
-                Word = originalText.Substring(8, j + 1);
-                hint = originalText.Substring(j + 10);
-            }
+            EnglishClue = originalText.Substring(originalText.IndexOf("engTrans"), length).Replace("engTrans ", "");
+            Word = originalText.Substring(8, originalText.IndexOf("engTrans")).Replace(" engTrans", "");
+            SwedishClue = originalText.Substring(originalText.IndexOf("sweClue")).Replace("sweClue ", "");
 
             InRow = int.Parse(position.Substring(0, 2)) - 1;
             InColumn = int.Parse(position.Substring(3, 2)) - 1;
@@ -62,32 +72,35 @@ public class GenerateCrossword : MonoBehaviour {
                     Check check = ObjectArray[InRow, InColumn + j].GetComponent<Check>();
                     check.AcrossStart = position;
                     check.InAcross = Word;
-                    check.AcrossHint = hint;
+                    check.AcrossClue = EnglishClue;
+                    check.SweAcrossClue = SwedishClue;
+                    check.ColumnIndex = j;
 
                     if (check.SaveChar == ' ')
                     {
                         check.SaveChar = Word[j];
-                        //ObjectArray[InRow, InColumn + j].transform.GetChild(0).GetComponent<Text>().text = Word[j].ToString().ToUpper();
                         ObjectArray[InRow, InColumn + j].GetComponent<Image>().enabled = true;
                     }
                 }
             }
             else if (position[position.Length - 1] == 'd')
-            {
+            {                
                 for (int j = 0; j < Word.Length; j++)
                 {
-                    ObjectArray[InRow + j, InColumn].GetComponent<Check>().DownStart = position;
-                    ObjectArray[InRow + j, InColumn].GetComponent<Check>().InDown = Word;
-                    ObjectArray[InRow + j, InColumn].GetComponent<Check>().DownHint = hint;
-                    if (ObjectArray[InRow + j, InColumn].GetComponent<Check>().SaveChar == ' ')
+                    Check check = ObjectArray[InRow + j, InColumn].GetComponent<Check>();
+                    check.DownStart = position;
+                    check.InDown = Word;
+                    check.DownClue = EnglishClue;
+                    check.SweDownClue = SwedishClue;
+                    check.RowIndex = j;
+
+                    if (check.SaveChar == ' ')
                     {
-                        ObjectArray[InRow + j, InColumn].GetComponent<Check>().SaveChar = Word[j];
-                        //ObjectArray[InRow + j, InColumn].transform.GetChild(0).GetComponent<Text>().text = Word[j].ToString().ToUpper();
+                        check.SaveChar = Word[j];
                         ObjectArray[InRow + j, InColumn].GetComponent<Image>().enabled = true;
                     }
                 }
             }
-
             i++;
         }
         reader.Close();
@@ -102,6 +115,8 @@ public class GenerateCrossword : MonoBehaviour {
             {
                 ObjectArray[i, j] = Instantiate(word, transform);
                 ObjectArray[i, j].name = i.ToString() + "." + j.ToString();
+                ObjectArray[i, j].GetComponent<Check>().Row = i;
+                ObjectArray[i, j].GetComponent<Check>().Column = j;                
             }
             i++;
         }
