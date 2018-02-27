@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 2108210716, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
+  m_Name: grad
+  m_EditorClassIdentifier: 
+  topLeft: {r: 0.78617, g: 0.8533327, b: 0.9632353, a: 1}
+  topRight: {r: 0.78431374, g: 0.85490197, b: 0.9647059, a: 1}
+  bottomLeft: {r: 0.33823532, g: 0.12435122, b: 0.12435122, a: 1}
+  bottomRight: {r: 0.3372549, g: 0.1254902, b: 0.1254902, a: 1}

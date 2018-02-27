@@ -43,7 +43,7 @@ public class CrosswordManager : MonoBehaviour {
 	
 	void Update () {
 
-        Debug.Log(Star);
+        //Debug.Log(Star);
         if (WorkOnNewWord != TheWord)        //changing to other word
         {            
             isWordCorrectClick = false;

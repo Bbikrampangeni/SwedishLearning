@@ -55,7 +55,6 @@ public class GenerateCrossword : MonoBehaviour {
         while ((originalText = reader.ReadLine()) != null)
         {            
             int length = originalText.IndexOf("sweClue") -  originalText.IndexOf("engTrans");
-
             position = originalText.Substring(0, 7);
             EnglishClue = originalText.Substring(originalText.IndexOf("engTrans"), length).Replace("engTrans ", "");
             Word = originalText.Substring(8, originalText.IndexOf("engTrans")).Replace(" engTrans", "");
