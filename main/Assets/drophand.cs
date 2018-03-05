@@ -24,16 +24,23 @@ get
     {
        
         
-            if (!item && this.gameObject.tag == draghandler.itemdrag.tag)
+            if (!item && this.gameObject.tag == draghandler.itemdrag.tag   )
             {
 
                 draghandler.itemdrag.transform.SetParent(transform);
                 text = draghandler.itemdrag.GetComponent<Text>();
                 text.color = Color.green;
+
+        }
+        else if (!item && this.gameObject.tag != draghandler.itemdrag.tag)
+        {
+            draghandler.itemdrag.transform.SetParent(transform);
+            text = draghandler.itemdrag.GetComponent<Text>();
+            text.color = Color.red;
         }
        
-        
-        
+
+
     }
     #endregion
 }

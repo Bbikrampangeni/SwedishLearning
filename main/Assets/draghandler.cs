@@ -35,7 +35,7 @@ public class draghandler : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDrag
         if (transform.parent== startparent)
         {
             transform.position = startposition;
-            text.color = Color.blue;
+            
 
         }
         
