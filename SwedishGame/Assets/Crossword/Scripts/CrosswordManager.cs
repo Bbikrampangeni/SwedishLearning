@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CrosswordManager : MonoBehaviour {
     
@@ -11,12 +12,20 @@ public class CrosswordManager : MonoBehaviour {
     public GameObject FinishButton;
     public GameObject TranslateButton;
     public GameObject InsertButton;
+    public GameObject Congratulation;
+    public GameObject WelcomeScreen;
+    public GameObject Grid;
+    public GameObject StarObject;
+    public GameObject StarPrefab;
+    public GameObject FinalResult;
 
     public static string TheWord = "";
     public static string WordPosition = "";
     public static string Clue = "";             //in English
     public static string SwedishClue = "";
     public static bool IsAcross = true;
+    public static bool isReplay;
+    public static bool isFinalChecked;
     public static int LengthOfWord = 0;
     public static float Star = 3;
 
@@ -27,8 +36,8 @@ public class CrosswordManager : MonoBehaviour {
     private int cursorCount = 0;
     private bool isInserted;                    //control cursor after inserting a letter
     private bool isWordCorrectClick;
-    private bool isFinalChecked;
     private bool mark;                          //used for translate scoring
+    private bool isWelcome;
 
     void Start ()
     {
@@ -39,11 +48,11 @@ public class CrosswordManager : MonoBehaviour {
         isWordCorrectClick = false;
         isFinalChecked = false;
         mark = false;
+        isWelcome = false;
+        isReplay = false;
     }
 	
 	void Update () {
-
-        //Debug.Log(Star);
         if (WorkOnNewWord != TheWord)        //changing to other word
         {            
             isWordCorrectClick = false;
@@ -52,13 +61,16 @@ public class CrosswordManager : MonoBehaviour {
             WorkOnNewWord = TheWord;
         }        
 
-        if (system.currentSelectedGameObject != null && system.currentSelectedGameObject.tag == "Crossword")            //save the last working box
+        if (system.currentSelectedGameObject != null)            //save the last working box
         {
-            LastSelectedGameObject = system.currentSelectedGameObject;
-            FinishButton.SetActive(true);
-            TranslateButton.SetActive(true);
-            InsertButton.SetActive(true);
-        }
+            if(system.currentSelectedGameObject.tag == "Crossword" && system.currentSelectedGameObject.name != "Replay")
+            {
+                LastSelectedGameObject = system.currentSelectedGameObject;
+                FinishButton.SetActive(true);
+                TranslateButton.SetActive(true);
+                InsertButton.SetActive(true);
+            }            
+        }        
 
         if (LastSelectedGameObject != null)
         {
@@ -72,11 +84,88 @@ public class CrosswordManager : MonoBehaviour {
         if(!isFinalChecked)
             SetBoxColor();
 
+        displayStarScore();
+        if (isWelcome && !isFinalChecked)
+        {
+            WelcomeScreen.SetActive(false);
+            Grid.SetActive(true);
+            StarObject.SetActive(true);
+            Congratulation.SetActive(false);
+        }
+        else if(!isWelcome && !isFinalChecked)
+        {
+            WelcomeScreen.SetActive(true);
+            Grid.SetActive(false);
+            StarObject.SetActive(false);
+        }
+
+        else if(isWelcome && isFinalChecked)
+        {
+            WelcomeScreen.SetActive(false);
+            Grid.SetActive(true);
+            StarObject.SetActive(true);
+            Congratulation.SetActive(false);
+        }
+
+        if (isReplay)
+        {
+            Star = 3;
+            EngClues.SetActive(false);
+            SwedishClues.SetActive(false);
+            //SwedishClues.GetComponentInChildren<Text>().text = "";
+            TheWord = "";
+        }
+        
+        
     }//Update()
+
+    public void ExitButton()
+    {
+        SceneManager.LoadScene("Latvia");
+    }
+
+    public void Replay()
+    {
+        isReplay = true;       
+        
+    }
+    public void CongratulationEnable()
+    {
+        Congratulation.SetActive(true);
+
+    }
+
+    public void WelcomeDisable()
+    {
+        isWelcome = true;
+    }
+
+    private void displayStarScore()
+    {
+        float quaterOfStar = Star / 0.25f;
+        GameObject starScore = GameObject.Find("StarScorePanel");
+
+        for(int i = (int)quaterOfStar; i < 12; i++)
+        {
+            if(starScore != null)
+                starScore.transform.GetChild(i).gameObject.GetComponent<Image>().color = Color.black;       //set color for empty star
+        }        
+
+        for(int i = 0; i < quaterOfStar;i++)
+        {
+            if(starScore != null)
+                starScore.transform.GetChild(i).gameObject.GetComponent<Image>().color = Color.white;
+        }
+    }
 
     public void FinalCheck()
     {
+        if (Star % (int)Star == 0.75f)          //round the score
+            Star = Star + 0.25f;
+        else
+            Star = (int)Star;
         isFinalChecked = true;
+        
         foreach(GameObject game in GameObject.FindGameObjectsWithTag("Crossword"))
         {
             Check check = game.GetComponent<Check>();
@@ -90,6 +179,12 @@ public class CrosswordManager : MonoBehaviour {
                 game.GetComponent<Image>().color = Color.cyan;
             game.GetComponent<InputField>().enabled = false;
         }
+
+        for(int i = 0; i < (int) Star; i++)
+        {
+            Instantiate(StarPrefab, FinalResult.transform);
+        }
+
     }
 
     private void ResetTextColor()
@@ -106,21 +201,20 @@ public class CrosswordManager : MonoBehaviour {
 
     public void EnglishTranslate()
     {
-        if(Star > 0.25f)
+        if(Star >= 1 && !isFinalChecked)
         {
             EngClues.SetActive(true);
             EngClues.GetComponentInChildren<Text>().text = Clue;
             if (mark)
             {
-                Star -= 0.5f;
+                Star -= 1;
                 mark = false;
-            }
-                
+            }                
         }
     }
     public void InsertLetter()
     {
-        if(LastSelectedGameObject != null && Star > 0)
+        if(LastSelectedGameObject != null && Star > 0 && !isFinalChecked)
         {
             LastSelectedGameObject.GetComponent<InputField>().text = LastSelectedGameObject.GetComponent<Check>().SaveChar.ToString();
             LastSelectedGameObject.GetComponent<InputField>().OnPointerClick(new PointerEventData(system));
@@ -149,7 +243,9 @@ public class CrosswordManager : MonoBehaviour {
                 Check check = gameobject.GetComponent<Check>();              
                     
                 if ((check.InAcross == TheWord || check.InDown == TheWord))
+                {
                     image.color = new Color32(135, 210, 212, 255);
+                }
                 else
                     image.color = Color.white;
 
@@ -157,7 +253,14 @@ public class CrosswordManager : MonoBehaviour {
                     currentGameObject.GetComponent<Image>().color = Color.cyan;
             }
             else if (gameobject.GetComponent<Check>().SaveChar == ' ')
-                gameobject.GetComponent<Image>().color = Color.gray;
+            {
+                gameobject.GetComponent<Image>().color = Color.black;
+                gameobject.transform.GetChild(2).gameObject.GetComponent<Image>().color = Color.white;
+                gameobject.transform.GetChild(3).gameObject.GetComponent<Image>().color = Color.white;
+                gameobject.transform.GetChild(4).gameObject.GetComponent<Image>().color = Color.white;
+                gameobject.transform.GetChild(5).gameObject.GetComponent<Image>().color = Color.white;
+            }
+                
         }
     }
 
