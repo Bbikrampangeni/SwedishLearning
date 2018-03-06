@@ -20,25 +20,36 @@ public class draghandler : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDrag
         startposition = transform.position;
         startparent = transform.parent;
         
+        
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
-        text.color = Color.yellow;
+
+        /*if ( this.gameObject == startparent && this.gameObject.tag != itemdrag.tag)
+        {
+            text.color = Color.red;
+        }*/
+        if (this.gameObject == startparent&&this.gameObject.tag == itemdrag.tag)
+        {
+            text.color = Color.green;
+           
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         itemdrag = null;
 
-        if (transform.parent== startparent)
+        if (transform.parent== startparent )
         {
             transform.position = startposition;
-            
+
+  
 
         }
-        
+    
 
 
 
