@@ -14,6 +14,7 @@ public class tooltip : MonoBehaviour {
     public Text displayname;
     public Text displayInfo;
 
+
      void OnMouseEnter()
     {
         tooltipwindow.SetActive(true);
@@ -30,5 +31,8 @@ public class tooltip : MonoBehaviour {
     {
         tooltipwindow.SetActive(false);
     }
+    public void test()
+    {
 
+    }
 }

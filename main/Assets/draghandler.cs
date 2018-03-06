@@ -10,6 +10,7 @@ public class draghandler : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDrag
     Vector3 startposition;
     Transform startparent;
 
+
     private void Awake()
     {
         text = GetComponent<Text>();
@@ -19,13 +20,18 @@ public class draghandler : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDrag
         itemdrag = gameObject;
         startposition = transform.position;
         startparent = transform.parent;
-        
+        GetComponent<CanvasGroup>().blocksRaycasts = false;
+        if (itemdrag.tag !=this.gameObject.tag && this.gameObject.tag == null)
+        {
+            GetComponent<CanvasGroup>().blocksRaycasts = false;
+        }
         
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
+   
 
         /*if ( this.gameObject == startparent && this.gameObject.tag != itemdrag.tag)
         {
@@ -41,16 +47,13 @@ public class draghandler : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDrag
     public void OnEndDrag(PointerEventData eventData)
     {
         itemdrag = null;
-
+       
         if (transform.parent== startparent )
         {
             transform.position = startposition;
-
-  
-
+            GetComponent<CanvasGroup>().blocksRaycasts = true;
         }
-    
-
+        
 
 
 
