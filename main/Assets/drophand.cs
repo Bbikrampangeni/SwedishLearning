@@ -34,6 +34,7 @@ get
                 draghandler.itemdrag.transform.SetParent(transform);
                 text = draghandler.itemdrag.GetComponent<Text>();
                 text.color = Color.green;
+           
             GetComponent<CanvasGroup>().blocksRaycasts = true;
 
         }
@@ -49,6 +50,7 @@ get
 
             text = draghandler.itemdrag.GetComponent<Text>();
             text.color = Color.red;
+            starmanger.Star -= 0.25f;
             if (draghandler.itemdrag.tag!=this.gameObject.tag && this.gameObject.tag== null)
             {
                 GetComponent<CanvasGroup>().blocksRaycasts = true;
