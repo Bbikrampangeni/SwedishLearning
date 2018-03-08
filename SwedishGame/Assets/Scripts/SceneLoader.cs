@@ -18,4 +18,14 @@ public class SceneLoader : MonoBehaviour {
                 while (!loadScene.isDone)
                     yield return null;
         }
+
+    public void LoadCrossword()
+    {
+        SceneManager.LoadScene("Crossword");
+    }
+
+    public void LoadListening()
+    {
+        SceneManager.LoadScene("ListeningTask");
+    }
 }

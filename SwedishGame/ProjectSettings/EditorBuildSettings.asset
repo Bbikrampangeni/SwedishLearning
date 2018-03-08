@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 211e7b4167689cb4091e26764ae99218
+  - enabled: 1
     path: Assets/ComicSystem.unity
     guid: 9f132ccebd2e12b44925c5f79a7482cb
   - enabled: 1
@@ -14,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ComicSystem3.unity
     guid: 89a852e28c22d434496ee1ba2b0bea62
-  - enabled: 1
-    path: Assets/Scenes/Start.unity
-    guid: 211e7b4167689cb4091e26764ae99218
   - enabled: 1
     path: Assets/Scenes/Flashback.unity
     guid: 8a5e32f9866cd5142a4bb5c645542430

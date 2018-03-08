@@ -11,9 +11,10 @@ public class GenerateCrossword : MonoBehaviour {
 
     public GameObject word;
     public static GameObject[,] ObjectArray;
+    public int GridSize;
 
-    public int Column;
-    public int Row;
+    private int Column;
+    private int Row;
 
     private int InRow;
     private int InColumn;
@@ -26,7 +27,8 @@ public class GenerateCrossword : MonoBehaviour {
 
 
     private void Start()
-    {       
+    {
+        Column = Row = GridSize;
         ObjectArray = new GameObject[Row, Column];
 
         SetPanleSize(Row, Column);
@@ -34,8 +36,28 @@ public class GenerateCrossword : MonoBehaviour {
         ReadAndLoadText();
 
         DisableInputField();
-    }    
-    
+    }
+
+    private void Update()
+    {
+        if (CrosswordManager.isReplay)                      //replay
+        {
+            foreach(GameObject go in ObjectArray)
+            {
+                Destroy(go);
+            }
+
+            Column = Row = GridSize;
+            ObjectArray = new GameObject[Row, Column];
+
+            SetPanleSize(Row, Column);
+            GenerateGrid(Row, Column);
+            ReadAndLoadText();
+            DisableInputField();
+            CrosswordManager.isReplay = false;
+            CrosswordManager.isFinalChecked = false;
+        }
+    }
     void DisableInputField()
     {
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Crossword"))
@@ -48,12 +70,14 @@ public class GenerateCrossword : MonoBehaviour {
     void ReadAndLoadText()
     {
         int i = 0;
+        string[] CrosswordFiles = { "Assets/Resources/FirstCrossword.txt", "Assets/Resources/SecondCrossword.txt" };
+        System.Random random = new System.Random();
 
-        string path = "Assets/Resources/test.txt";
-        StreamReader reader = new StreamReader(path);
+        int randomNumber = random.Next(0, CrosswordFiles.Length);
+        StreamReader reader = new StreamReader(CrosswordFiles[randomNumber], System.Text.Encoding.GetEncoding("iso-8859-1"), true);
 
         while ((originalText = reader.ReadLine()) != null)
-        {            
+        {
             int length = originalText.IndexOf("sweClue") -  originalText.IndexOf("engTrans");
             position = originalText.Substring(0, 7);
             EnglishClue = originalText.Substring(originalText.IndexOf("engTrans"), length).Replace("engTrans ", "");
@@ -65,7 +89,6 @@ public class GenerateCrossword : MonoBehaviour {
 
             if (position[position.Length - 1] == 'a')
             {
-
                 for (int j = 0; j < Word.Length; j++)
                 {
                     Check check = ObjectArray[InRow, InColumn + j].GetComponent<Check>();
@@ -121,11 +144,11 @@ public class GenerateCrossword : MonoBehaviour {
         }
     }
 
-    void SetPanleSize(int width, int height)
+    void SetPanleSize(int row, int column)
     {
         Vector2 cellSize = GetComponent<GridLayoutGroup>().cellSize;
 
         RectTransform rt = GetComponent<RectTransform>();
-        rt.sizeDelta = new Vector2(cellSize.x * width, cellSize.y * height);
+        rt.sizeDelta = new Vector2((cellSize.x + 0.5f) * row, (cellSize.y + 0.5f) * column);
     }    
 }

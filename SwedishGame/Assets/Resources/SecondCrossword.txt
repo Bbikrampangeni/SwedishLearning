@@ -1,0 +1,13 @@
+01,01,a avtal engTrans An official agreement between to sides who were involved in a conflict. sweClue Juridiskt bindande överenskommelse mellan personer när det hänt en konflikt.
+03,05,a åtalad engTrans Person that is suspected for a crime in court. sweClue Person that is suspected for a crime in court.
+06,04,a bedrägeri engTrans Is an intentionally deceptive action designed to provide the perpetrator with an unlawful gain, or to deny a right to a victim. sweClue ett brott som begås när bedragaren genom att vilseleda en annan person får vederbörande att agera på ett sätt som gynnar honom och innebär skada för den vilseledde.
+09,07,a ränta engTrans The coast of a loan that is added to the total loan. sweClue Allmänt pris på lån av pengar
+12,05,a kapital engTrans Wealth in the form of money or other assets owned by a person or organization or available for a purpose such as starting a company or investing. sweClue
+13,07,a fullmakt engTrans sweClue Är ett företags resurser
+01,01,d advokat engTrans For example in court the client generally needs this person to help himo r her. This persons job is done within the rules of etics that protects the client’s interests. sweClue Till exempel inför domstol så brukar klienten behöva denna person till hjälp. Denna personens arbete utförs inom ramen för etiska regler som ska skydda klientens intressen.
+03,02,d tillgång engTrans An item of property owned by a person or company, regarded as having value and available to meet debts, commitments, or legacies. sweClue Är i redovisningssammanhang summa av det bokförda värdet på hela förmögenheten.
+06,04,d bevis engTrans With these the police can confirm a suspect for a crime sweClue Med de här så kan polisen bekräfta misstänkta till brott.
+01,07,d skador engTrans A sum of money claimed or awarded in compensation for a loss or an injury. sweClue
+05,10,d bevittna engTrans sweClue Ofördelaktig effekt på en sak, person eller ett intresse.
+01,12,d olaglig engTrans Against the law. sweClue Mot lagen.
+06,14,d lånetid engTrans That time period in which you need to pay back your loan. sweClue Den tid man har på sig att betala tillbaka lånet.
