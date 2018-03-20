@@ -149,7 +149,9 @@ public class ListeningController : MonoBehaviour {
     }
 
     void DisplaySubtitle()
+
     {
+        /*
         if(audioSource.time >0 && audioSource.time< 5)
         {
             Subtitle.GetComponent<Text>().text = GameObject.Find("SubtitleText").GetComponent<SubtitleText>().text[0].paragraph;
@@ -202,6 +204,7 @@ public class ListeningController : MonoBehaviour {
         {
             Subtitle.GetComponent<Text>().text = GameObject.Find("SubtitleText").GetComponent<SubtitleText>().text[12].paragraph;
         }
+        */
     }
 
     public void SetActiveSubtitle()

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 6ce809a5902fbb04f82ded658362f8dc
+timeCreated: 1520245502
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Didact Gothic
+  fontNames:
+  - Didact Gothic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2b75e6f42c245e94d9914ad08d4620a1, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

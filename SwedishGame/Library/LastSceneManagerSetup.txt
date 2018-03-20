@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Latvia.unity
+- path: "Assets/Scenes/\xB4mainblanks.unity"
   isLoaded: 1
   isActive: 1
