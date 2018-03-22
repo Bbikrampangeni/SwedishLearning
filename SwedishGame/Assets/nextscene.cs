@@ -1,16 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class nextscene : MonoBehaviour {
 
+     PlayerStats starStats = PlayerStats.instance;
 	// Use this for initialization
 	public void next(int nextscene)
     {
-#pragma warning disable CS0618 // Type or member is obsolete
-        Application.LoadLevel(nextscene);
-#pragma warning restore CS0618 // Type or member is obsolete
-
         starmanger.Star = 3;
+        float record = starStats.fillinRecord;
+
+        if (starmanger.Star > record)
+        {
+            starStats.playerStars += 3;
+            SceneManager.LoadScene("Latvia");
+            starStats.fillinRecord = 3;
+        }
+        else
+        {
+            SceneManager.LoadScene("Latvia");
+        }
+        
+
+        
     }
 }

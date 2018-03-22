@@ -30,6 +30,8 @@ public class ListeningController : MonoBehaviour {
     int count = 0;
     float StarScore;
     int[] Array1;
+
+    PlayerStats starStats = PlayerStats.instance;
     
 
     void Start () {
@@ -128,7 +130,17 @@ public class ListeningController : MonoBehaviour {
 
     public void Exit()
     {
-        SceneManager.LoadScene("Start");
+        float record = starStats.listeningRecord;
+        if (StarScore > record)
+        {
+            starStats.playerStars += StarScore;
+            SceneManager.LoadScene("Latvia");
+            starStats.listeningRecord = StarScore;
+        }
+        else
+        {
+            SceneManager.LoadScene("Latvia");
+        }
     }
 
     void DisplaySpectrum()

@@ -39,6 +39,8 @@ public class CrosswordManager : MonoBehaviour {
     private bool mark;                          //used for translate scoring
     private bool isWelcome;
 
+    PlayerStats starStats = PlayerStats.instance;
+
     void Start ()
     {
         system = EventSystem.current;
@@ -121,7 +123,19 @@ public class CrosswordManager : MonoBehaviour {
 
     public void ExitButton()
     {
-        SceneManager.LoadScene("Latvia");
+        float record = starStats.crosswordRecord;
+
+        if (Star > record)
+        {
+            PlayerStats.instance.playerStars += Star;
+            SceneManager.LoadScene("Latvia");
+            starStats.crosswordRecord = Star;
+        }
+        else
+        {
+            SceneManager.LoadScene("Latvia");
+        }
+        
     }
 
     public void Replay()
