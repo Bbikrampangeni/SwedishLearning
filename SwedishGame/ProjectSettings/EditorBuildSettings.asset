@@ -29,3 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Crossword/Crossword.unity
     guid: f03ed364f0b856f4089d6c48ade76ca2
+  - enabled: 1
+    path: Assets/Scenes/mainblanks.unity
+    guid: ac13609795b714448bddb018c76cacdd
+  - enabled: 1
+    path: Assets/Scenes/fillintheblanks.unity
+    guid: b4399f6d7412a5b4390024f41d036473

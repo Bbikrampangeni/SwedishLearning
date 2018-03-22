@@ -6,26 +6,32 @@ using UnityEngine.EventSystems;
 
 public class SceneLoader : MonoBehaviour {
 
-        public void ClickButton()
-        {
-                string scene = EventSystem.current.currentSelectedGameObject.name;
-                StartCoroutine(LoadScene(scene));
-        }
-
-        IEnumerator LoadScene(string scene)
-        {
-                AsyncOperation loadScene = SceneManager.LoadSceneAsync(scene);
-                while (!loadScene.isDone)
-                    yield return null;
-        }
-
-    public void LoadCrossword()
+    public void ClickButtonAsync()
     {
-        SceneManager.LoadScene("Crossword");
+        string scene = EventSystem.current.currentSelectedGameObject.name;
+        StartCoroutine(LoadSceneAsync(scene));
     }
 
-    public void LoadListening()
+    public void ClickButton()
     {
-        SceneManager.LoadScene("ListeningTask");
+        string scene = EventSystem.current.currentSelectedGameObject.name;
+        LoadScene(scene);
     }
+
+    IEnumerator LoadSceneAsync(string scene)
+    {
+        AsyncOperation loadScene = SceneManager.LoadSceneAsync(scene);
+        while (!loadScene.isDone)
+            yield return null;
+    }
+
+    public void LoadScene(string scene)
+    {
+        SceneManager.LoadScene(scene);
+    }
+
+
+        
+        
+    
 }
