@@ -175,7 +175,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Intro
+  m_Text: 
 --- !u!222 &163245283
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -583,7 +583,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WELcome text
+  m_Text: welcome
 --- !u!222 &1076564069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -642,10 +642,10 @@ MonoBehaviour:
   Dialogue:
     heading: welcome
     sentences:
-    - wlcommmregjgijdhgjnvnsdvhdsjbvdsfg dsgs eg sdgdgsg
-    - fdgd sfgd gsd
-    - sdfg
-    - 'dgdg dgd gdg s dgdsg sd dsg fdg '
+    - welcome to the Swedish learnign game mini task
+    - In this task, you have to fill the blanks
+    - By dragging and dropping the words in the correct place
+    - Read the previous emails to do so.
 --- !u!114 &1338620409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -919,6 +919,8 @@ GameObject:
   - component: {fileID: 2023245244}
   - component: {fileID: 2023245246}
   - component: {fileID: 2023245245}
+  - component: {fileID: 2023245248}
+  - component: {fileID: 2023245247}
   m_Layer: 5
   m_Name: sentence
   m_TagString: Untagged
@@ -941,7 +943,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -44, y: -26}
+  m_AnchoredPosition: {x: -44, y: 2}
   m_SizeDelta: {x: 312, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2023245245
@@ -964,7 +966,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 687dcec43b2f746efa5a1ceaf3ba0276, type: 3}
+    m_Font: {fileID: 12800000, guid: 6ce809a5902fbb04f82ded658362f8dc, type: 3}
     m_FontSize: 14
     m_FontStyle: 0
     m_BestFit: 0
@@ -976,13 +978,67 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: hello and welcome ot the game
+  m_Text: Press this button to play fill in the blanks, in the next game we will have
+    previous messages and you have to fill in the blanks.
 --- !u!222 &2023245246
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2023245243}
+--- !u!102 &2023245247
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2023245243}
+  m_Text: 
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &2023245248
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2023245243}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &2111426829
 GameObject:
   m_ObjectHideFlags: 0

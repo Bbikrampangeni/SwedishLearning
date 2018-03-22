@@ -15,9 +15,10 @@ public class starmanger : MonoBehaviour {
     public GameObject FinalResult;
     public static bool isFinalChecked;
     public static float Star = 3;
+    public GameObject popup;
     private void Start()
     {
-        system = EventSystem.current;
+       
         isFinalChecked = false;
         isreplay = false;
     }
@@ -25,12 +26,15 @@ public class starmanger : MonoBehaviour {
     {
 
         displayStarScore();
+        if (Star<1)
+        {
+            popup.SetActive(true); 
+        }
         if (isreplay)
         {
             Star = 3;
            
-
-            //SwedishClues.GetComponentInChildren<Text>().text = "";
+            
             
         }
 

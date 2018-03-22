@@ -1,0 +1,12 @@
+01,01,a user-friendly engTrans Clue for user-friendly sweClue lkajlsdk
+03,01,a access engTrans for access sweClue lkajlsdkjflkaldkf
+05,06,a scroll engTrans for scroll sweClue lkajlsdkjflkaldkf
+07,03,a operate engTrans for operate sweClue lkajlsdkjflkaldkf
+09,03,a keyboard engTrans for keyboard sweClue lkajlsdkjflkaldkf
+11,06,a function engTrans for function sweClue lkajlsdkjflkaldkf
+03,04,d equipped engTrans for equipped sweClue lkajlsdkjflkaldkf
+03,09,d store engTrans for store sweClue lkajlsdkjflkaldkf
+01,11,d display engTrans for display sweClue lkajlsdkjflkaldkf
+08,12,d memory engTrans for memory sweClue lkajlsdkjflkaldkf
+09,10,d data engTrans for data sweClue lkajlsdkjflkaldkf
+06,01,d test engTrans is test sweClue lkajlsdkjflkaldkf
