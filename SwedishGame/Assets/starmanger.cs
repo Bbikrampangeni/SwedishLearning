@@ -6,8 +6,10 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 
-public class starmanger : MonoBehaviour {
+public class starmanger : MonoBehaviour
+{
 
+    PlayerStats starStats = PlayerStats.instance;
     public GameObject StarObject;
     public GameObject StarPrefab;
     private EventSystem system;
@@ -28,14 +30,14 @@ public class starmanger : MonoBehaviour {
         if (isreplay)
         {
             Star = 3;
-           
+
 
             //SwedishClues.GetComponentInChildren<Text>().text = "";
-            
+
         }
 
     }
-private void displayStarScore()
+    private void displayStarScore()
     {
         float quaterOfStar = Star / 0.25f;
         GameObject starScore = GameObject.Find("StarScorePanel");
@@ -59,8 +61,18 @@ private void displayStarScore()
         else
             Star = (int)Star;
         isFinalChecked = true;
+
+        float record = starStats.crosswordRecord;
+
+        if (Star > record)
+        {
+            PlayerStats.instance.playerStars += Star;
+            starStats.crosswordRecord = Star;
+        }
     }
-    }
+}
+    
+    
 
 
 

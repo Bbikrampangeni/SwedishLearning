@@ -123,19 +123,7 @@ public class CrosswordManager : MonoBehaviour {
 
     public void ExitButton()
     {
-        float record = starStats.crosswordRecord;
-
-        if (Star > record)
-        {
-            PlayerStats.instance.playerStars += Star;
-            SceneManager.LoadScene("Latvia");
-            starStats.crosswordRecord = Star;
-        }
-        else
-        {
-            SceneManager.LoadScene("Latvia");
-        }
-        
+        SceneManager.LoadScene("Latvia");
     }
 
     public void Replay()
@@ -199,6 +187,13 @@ public class CrosswordManager : MonoBehaviour {
             Instantiate(StarPrefab, FinalResult.transform);
         }
 
+        float record = starStats.crosswordRecord;
+        if (Star > record)
+        {
+            PlayerStats.instance.playerStars += Star - starStats.crosswordRecord;
+            starStats.crosswordRecord = Star;
+        }
+ 
     }
 
     private void ResetTextColor()
