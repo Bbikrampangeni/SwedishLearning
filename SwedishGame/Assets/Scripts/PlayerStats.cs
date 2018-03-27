@@ -5,9 +5,9 @@ using UnityEngine;
 public class PlayerStats : MonoBehaviour {
 
 	public static PlayerStats instance = null;
+    public string selectedGender;
 
     public float playerStars = 0;
-
     public float crosswordRecord = 0;
     public float listeningRecord = 0;
     public float fillinRecord = 0;
@@ -24,12 +24,6 @@ public class PlayerStats : MonoBehaviour {
         }
         
         DontDestroyOnLoad(gameObject);
-	}
+	}    
 
-    // Update is called once per frame
-
-    public void AddStars()
-    {
-        Debug.Log("blöö");
-    }
 }

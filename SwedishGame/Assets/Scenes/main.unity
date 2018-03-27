@@ -2682,7 +2682,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &916134456
 GameObject:
@@ -3636,7 +3636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -398.79935, y: -367.797}
+  m_AnchoredPosition: {x: -398.76, y: -375.46}
   m_SizeDelta: {x: 51.26, y: 30.979998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1199251073
@@ -7614,47 +7614,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   countryImage: {fileID: 2109588012}
---- !u!1 &2129325463
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2129325465}
-  - component: {fileID: 2129325464}
-  m_Layer: 0
-  m_Name: PlayerStatsManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2129325464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2129325463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4100d24097a3bde4ab1c5bfa0ca50dee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerStars: 0
-  crosswordRecord: 0
-  listeningRecord: 0
-  fillinRecord: 0
---- !u!4 &2129325465
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2129325463}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.70854455, y: -0.06957189, z: -0.023693442}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

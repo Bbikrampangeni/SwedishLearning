@@ -10,11 +10,6 @@ public class OnEnter : MonoBehaviour, IPointerEnterHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         latviaImage.SetActive(true);
-        Debug.Log("Entering the latvia trigger");
     }
-
-    public void OnMouseOver()
-    {
-        Debug.Log(gameObject.name);
-    }
+    
 }
