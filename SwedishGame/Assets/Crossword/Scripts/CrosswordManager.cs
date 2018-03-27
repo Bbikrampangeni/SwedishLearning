@@ -18,6 +18,7 @@ public class CrosswordManager : MonoBehaviour {
     public GameObject StarObject;
     public GameObject StarPrefab;
     public GameObject FinalResult;
+    public GameObject ReplayButton;
 
     public static string TheWord = "";
     public static string WordPosition = "";
@@ -89,6 +90,7 @@ public class CrosswordManager : MonoBehaviour {
         displayStarScore();
         if (isWelcome && !isFinalChecked)
         {
+            ReplayButton.SetActive(true);
             WelcomeScreen.SetActive(false);
             Grid.SetActive(true);
             StarObject.SetActive(true);
@@ -96,6 +98,7 @@ public class CrosswordManager : MonoBehaviour {
         }
         else if(!isWelcome && !isFinalChecked)
         {
+            ReplayButton.SetActive(false);
             WelcomeScreen.SetActive(true);
             Grid.SetActive(false);
             StarObject.SetActive(false);

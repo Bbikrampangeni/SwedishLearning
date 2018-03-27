@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/loading screen.unity
+    guid: 1f5b7639927be1c40918c9fd34c10413
+  - enabled: 1
+    path: Assets/Scenes/Flashback.unity
+    guid: 8a5e32f9866cd5142a4bb5c645542430
+  - enabled: 1
     path: Assets/Scenes/main.unity
     guid: 03cb67e85a7678949a9003745fd10da1
   - enabled: 1
@@ -17,9 +23,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ComicSystem3.unity
     guid: 89a852e28c22d434496ee1ba2b0bea62
-  - enabled: 1
-    path: Assets/Scenes/Flashback.unity
-    guid: 8a5e32f9866cd5142a4bb5c645542430
   - enabled: 1
     path: Assets/Scenes/Latvia.unity
     guid: fc8751b42afe0e945b20634ab9b8ae2e

@@ -265,6 +265,7 @@ MonoBehaviour:
   StarObject: {fileID: 2117664190}
   StarPrefab: {fileID: 1991674227236152, guid: d95b3f9a611a52e4e92aecd76c0b5fa7, type: 2}
   FinalResult: {fileID: 1622325519}
+  ReplayButton: {fileID: 846871611}
 --- !u!4 &30084897
 Transform:
   m_ObjectHideFlags: 0
