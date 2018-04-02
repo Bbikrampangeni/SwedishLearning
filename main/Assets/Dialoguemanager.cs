@@ -34,7 +34,7 @@ public class Dialoguemanager : MonoBehaviour {
     {
         if (sentences.Count == 0)
         {
-            EndDialogue(3);
+            EndDialogue(5);
             return;
         }
 

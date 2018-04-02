@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/main.unity
     guid: 03cb67e85a7678949a9003745fd10da1
-  - enabled: 1
+  - enabled: 0
     path: Assets/scenes/fillintheblanks.unity
     guid: b4399f6d7412a5b4390024f41d036473
   - enabled: 1
@@ -20,3 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/actualblank.unity
     guid: 00ccfd8fe17c20e4c99482be238a42b4
+  - enabled: 1
+    path: Assets/scenes/fillit.unity
+    guid: 103a20b17c5be44498adb09914829c9a
+  - enabled: 1
+    path: Assets/scenes/introfood.unity
+    guid: f8f248770702fc740994f8e79493e768
