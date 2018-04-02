@@ -1,0 +1,12 @@
+01,04,a säkerhet engTrans A thing deposited or pledged as a guarantee of the fulfilment of an undertaking or the repayment of a loan, to be forfeited in case of default. sweClue Garanti för banken om man inte kan betala tillbaka lånet.
+03,01,a värdeminskning engTrans A decrease in the value of a currency relative to other currencies. sweClue Nedskrivning av värdet på en kapitalvaraeller annan tillgång.
+08,03,a investering engTrans Put money into finanical schemes, shares, property, or a commerical venture with the expectatio of achieving a profit. sweClue Placera kapital på något. / satsa pengar på något.
+11,01,a kapital engTrans Wealth in the form of money or other assets owned by a person or organization or available for a purpose such as starting a company or investing. sweClue Är ett företags resurser.
+05,02,a bedrägeri engTrans Is an intentionally deceptive action designed to provide the perpetrator with an unlawful gain, or to deny a right to a victim. sweClue ett brott som begås när bedragaren genom att vilseleda en annan person får vederbörande att agera på ett sätt som gynnar honom och innebär skada för den vilseledde.
+07,04,a åtalad engTrans Person that is suspected for a crime in court. sweClue Med de här så kan polisen bekräfta misstänkta till brott.
+13,02,a olaglig engTrans Against the law sweClue mot lagen
+06,04,d lånetid engTrans An item of property owned by a person or company, regarded as having value and available to meet debts, commitments, or legacies. sweClue Är i redovisningssammanhang summa av det bokförda värdet på hela förmögenheten.
+08,10,d ränta engTrans The coast of a loan that is added to the total loan. sweClue Allmänt pris på lån av pengar.
+02,12,d tillgång engTrans An item of property owned by a person or company, regarded as having value and available to meet debts, commitments, or legacies. sweClue Är i redovisningssammanhang summa av det bokförda värdet på hela förmögenheten.
+09,02,d skador engTrans A sum of money claimed or awarded in compensation for a loss or an injury. sweClue Ofördelaktig effekt på en sak, person eller ett intresse.
+10,14,d avtal engTrans An official agreement between to sides who were involved in a conflict. sweClue Juridiskt bindande överenskommelse mellan personer när det hänt en konflikt.
