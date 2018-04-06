@@ -191,7 +191,7 @@ public class ListeningController : MonoBehaviour {
     }
     public void Exit()
     {
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("Latvia");
     }
 
     void DisplaySpectrum()
