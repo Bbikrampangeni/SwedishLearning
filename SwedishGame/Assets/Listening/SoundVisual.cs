@@ -59,7 +59,7 @@ public class SoundVisual : MonoBehaviour {
             if (visualScale[visualIndex] < scaleY)
                 visualScale[visualIndex] = scaleY;
 
-            visualList[visualIndex].localScale = new Vector3(5, 0.3f, 1) + Vector3.up * visualScale[visualIndex] * 3;
+            visualList[visualIndex].localScale = new Vector3(5, 0.1f, 1) + Vector3.up * visualScale[visualIndex] * 4;
             visualIndex++;
         }
     }

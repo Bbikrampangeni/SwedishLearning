@@ -21,6 +21,7 @@ public class ListeningController : MonoBehaviour {
     GameObject[] Answer;
     GameObject QuestionsBank;
     Animator m_animator;
+    PlayerStats stats = PlayerStats.instance;
 
     //private Button Play;
     
@@ -59,7 +60,7 @@ public class ListeningController : MonoBehaviour {
 	
 	void Update () {
         displayStarScore();
-        //CalculateScore();
+        CalculateScore();
         DisplaySubtitle();
         
 
@@ -100,6 +101,7 @@ public class ListeningController : MonoBehaviour {
         }
         else
         {
+            
             GameObject.Find("Confirm").GetComponent<Button>().enabled = false;
             Color qColor = GameObject.Find("Question").GetComponent<Text>().color;
             qColor.a = Mathf.Lerp(0, 1, Time.deltaTime / lerp);
@@ -265,6 +267,8 @@ public class ListeningController : MonoBehaviour {
         {
             Subtitle.GetComponent<Text>().text = GameObject.Find("SubtitleText").GetComponent<SubtitleText>().text[12].paragraph;
         }
+
+        
     }
 
     public void SetActiveSubtitle()
@@ -294,6 +298,12 @@ public class ListeningController : MonoBehaviour {
                     StarScore -= 0.5f;
                 }
             }
+            float record = StarScore;
+            if (record > stats.listeningRecord)
+            {
+                stats.fillinRecord = StarScore;
+                stats.playerStars = StarScore;
+            }
 
             if (StarScore <= 0)
                 StarScore = 0;
@@ -301,6 +311,9 @@ public class ListeningController : MonoBehaviour {
             Star.SetActive(true);
             GameObject.Find("StarScorePanel2").SetActive(false);
             ScoreCalculated = true;
+            
+            
+            
         }
     }
 

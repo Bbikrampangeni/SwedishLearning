@@ -314,7 +314,7 @@ public class CrosswordManager : MonoBehaviour {
                     }
                 }
                 GenerateCrossword.ObjectArray[row, column].GetComponent<InputField>().OnPointerClick(new PointerEventData(system));
-                isInserted = false;
+                isInserted = false; 
             }
         }
         
