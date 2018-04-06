@@ -12,6 +12,8 @@ public class Questions : MonoBehaviour {
     {
         [TextArea(3, 10)]
         public string Question;
+        [TextArea(3, 10)]
+        public string TranslateQuestions;
         [TextArea(2, 10)]
         public string Answer1;
         [TextArea(2, 10)]
