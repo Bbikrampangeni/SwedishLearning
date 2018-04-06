@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 public class ListeningController : MonoBehaviour {
 
     public GameObject PlayButton;
+    public GameObject PlaySutitleButton;
+    public GameObject PauseButton;
+    public GameObject StopButton;
     public GameObject Star;
     public GameObject Subtitle;
 
@@ -17,7 +20,7 @@ public class ListeningController : MonoBehaviour {
     GameObject QuestionsBank;
     Animator m_animator;
 
-    private Button Play;
+    //private Button Play;
     
     private AudioSource audioSource;
     private bool isPaused = false;
@@ -38,7 +41,7 @@ public class ListeningController : MonoBehaviour {
         QuestionsBank = GameObject.Find("QuestionsBank");
         audioSource = Camera.main.GetComponent<AudioSource>();
 
-        Play = PlayButton.GetComponent<Button>();
+        //Play = PlayButton.GetComponent<Button>();
         confirm = false;
         m_animator = GameObject.Find("QuestionAndAnswers").GetComponent<Animator>();
         //Question = GameObject.Find("Question");
@@ -57,17 +60,13 @@ public class ListeningController : MonoBehaviour {
         CalculateScore();
         DisplaySubtitle();
 
-        Play.onClick.AddListener(PlayAudio);
+        //Play.onClick.AddListener(PlayAudio);
 
-        //if (hasPlayed && !audioSource.isPlaying)
-        //    Question.SetActive(true);
         if(audioSource.time == audioSource.clip.length)
         {
             isPaused = false;
         }
 
-        //if (audioSource.isPlaying)
-        //    hasPlayed = true;
         if (audioSource.time > audioSource.clip.length - 2)
         {
             hasPlayed = true;
@@ -124,9 +123,43 @@ public class ListeningController : MonoBehaviour {
             
         }
 
+        DisplayButtons();
+
+        //Debug.Log(audioSource.isPlaying);
         //DisplaySpectrum();
             
 	}
+
+    public void PauseAudio()
+    {
+        audioSource.Pause();
+        isPaused = true;
+    }
+
+    public void StopAudio()
+    {
+        audioSource.Stop();
+    }
+    void DisplayButtons()
+    {
+        if (audioSource.isPlaying)
+        {
+            PlayButton.SetActive(false);
+            PlaySutitleButton.SetActive(false);
+            PauseButton.SetActive(true);
+            StopButton.SetActive(true);
+        }
+        else
+        {
+            PlayButton.SetActive(true);
+            PlaySutitleButton.SetActive(true);
+            PauseButton.SetActive(false);
+            StopButton.SetActive(false);
+        }
+
+        
+
+    }//Update
 
     public void Exit()
     {
@@ -272,15 +305,19 @@ public class ListeningController : MonoBehaviour {
                 Star.transform.GetChild(i).gameObject.GetComponent<Image>().color = Color.white;
         }
     }
-    void PlayAudio()
+    public void PlayAudio()
     {
         if (!isPaused)
         {
+            Debug.Log("here");
             audioSource.Play();
         }
-            
+
         else
+        {
             audioSource.UnPause();
+            isPaused = false;
+        }            
     }
 
     public void isConfirmed()

@@ -149,6 +149,6 @@ public class GenerateCrossword : MonoBehaviour {
         Vector2 cellSize = GetComponent<GridLayoutGroup>().cellSize;
 
         RectTransform rt = GetComponent<RectTransform>();
-        rt.sizeDelta = new Vector2((cellSize.x + 0.5f) * row, (cellSize.y + 0.5f) * column);
+        rt.sizeDelta = new Vector2((cellSize.x + 1) * row, (cellSize.y + 1) * column);
     }    
 }
