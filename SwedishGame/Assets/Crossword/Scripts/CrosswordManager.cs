@@ -190,7 +190,7 @@ public class CrosswordManager : MonoBehaviour {
         float record = starStats.crosswordRecord;
         if (Star > record)
         {
-            PlayerStats.instance.playerStars += Star - starStats.crosswordRecord;
+            starStats.playerStars += Star - record;
             starStats.crosswordRecord = Star;
         }
  

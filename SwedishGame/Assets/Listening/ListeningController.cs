@@ -298,12 +298,7 @@ public class ListeningController : MonoBehaviour {
                     StarScore -= 0.5f;
                 }
             }
-            float record = StarScore;
-            if (record > stats.listeningRecord)
-            {
-                stats.fillinRecord = StarScore;
-                stats.playerStars = StarScore;
-            }
+            
 
             if (StarScore <= 0)
                 StarScore = 0;
@@ -311,9 +306,15 @@ public class ListeningController : MonoBehaviour {
             Star.SetActive(true);
             GameObject.Find("StarScorePanel2").SetActive(false);
             ScoreCalculated = true;
-            
-            
-            
+
+            float record = stats.listeningRecord;
+            if (StarScore > record)
+            {
+                stats.playerStars += StarScore - record;
+                stats.listeningRecord = StarScore;
+            }
+
+
         }
     }
 
