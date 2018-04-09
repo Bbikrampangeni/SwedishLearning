@@ -27,7 +27,7 @@ public class CrosswordManager : MonoBehaviour {
     public static bool isReplay;
     public static bool isFinalChecked;
     public static int LengthOfWord = 0;
-    public static float Star = 3;
+    public float Star = 3;
 
 
     private GameObject LastSelectedGameObject;
@@ -162,24 +162,42 @@ public class CrosswordManager : MonoBehaviour {
 
     public void FinalCheck()
     {
+        
+        isFinalChecked = true;
+        Star = Star + 16.61f;
+        foreach (GameObject game in GameObject.FindGameObjectsWithTag("Crossword"))
+        {
+            Check check = game.GetComponent<Check>();
+            check.isCorrectLetterChecked = false;
+            if (check.SaveChar.ToString().ToUpper() == game.GetComponent<InputField>().text)
+            {
+                game.transform.Find("Text").GetComponent<Text>().color = Color.blue;
+                //Star += 1f;
+            }       //update text color                      
+            else if (check.SaveChar.ToString().ToUpper() != game.GetComponent<InputField>().text)
+            { 
+                game.transform.Find("Text").GetComponent<Text>().color = Color.red;
+                Star -= 0.12f;
+            }   
+                
+                
+            if(check.SaveChar != ' ')
+                game.GetComponent<Image>().color = Color.cyan;
+            game.GetComponent<InputField>().enabled = false;
+        }
+
         if (Star % (int)Star == 0.75f)          //round the score
             Star = Star + 0.25f;
         else
             Star = (int)Star;
-        isFinalChecked = true;
-        
-        foreach(GameObject game in GameObject.FindGameObjectsWithTag("Crossword"))
+
+        if (Star < 0.5f)
         {
-            Check check = game.GetComponent<Check>();
-            check.isCorrectLetterChecked = false;
-            if (check.SaveChar.ToString().ToUpper() == game.GetComponent<InputField>().text)        //update text color      
-                game.transform.Find("Text").GetComponent<Text>().color = Color.blue;          
-            else          
-                game.transform.Find("Text").GetComponent<Text>().color = Color.red;
-         
-            if(check.SaveChar != ' ')
-                game.GetComponent<Image>().color = Color.cyan;
-            game.GetComponent<InputField>().enabled = false;
+            Star = 0;
+        }
+        if (Star > 3f)
+        {
+            Star = 3;
         }
 
         for(int i = 0; i < (int) Star; i++)
@@ -203,9 +221,10 @@ public class CrosswordManager : MonoBehaviour {
 
         if(check.isCorrectLetterChecked && check.SaveChar.ToString().ToUpper() != inputField.text && inputField.text.Length != 0 )
             LastSelectedGameObject.transform.Find("Text").GetComponent<Text>().color = Color.red;
-
-        else if(check.isCorrectLetterChecked && check.SaveChar.ToString().ToUpper() == inputField.text && inputField.text.Length != 0)
+        
+        else if (check.isCorrectLetterChecked && check.SaveChar.ToString().ToUpper() == inputField.text && inputField.text.Length != 0)
             LastSelectedGameObject.transform.Find("Text").GetComponent<Text>().color = Color.blue;
+      
     }
 
     public void EnglishTranslate()

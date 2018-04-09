@@ -307,6 +307,15 @@ public class ListeningController : MonoBehaviour {
             GameObject.Find("StarScorePanel2").SetActive(false);
             ScoreCalculated = true;
 
+            if (StarScore % (int)StarScore == 0.75f)
+            {
+                StarScore = StarScore + 0.25f;
+            }
+            else
+            {
+                StarScore = (int)StarScore;
+            }
+
             float record = stats.listeningRecord;
             if (StarScore > record)
             {
