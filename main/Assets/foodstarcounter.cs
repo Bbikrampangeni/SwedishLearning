@@ -16,7 +16,7 @@ public class foodstarcounter : MonoBehaviour
     public GameObject FinalResult;
     public static bool isFinalChecked;
     public static float Star = 3;
-    public GameObject popup;
+    //public GameObject popup;
     private void Start()
     {
 
@@ -29,7 +29,7 @@ public class foodstarcounter : MonoBehaviour
         displayStarScore();
         if (Star < 1)
         {
-            popup.SetActive(true);
+            //popup.SetActive(true);
         }
         if (isreplay)
         {
