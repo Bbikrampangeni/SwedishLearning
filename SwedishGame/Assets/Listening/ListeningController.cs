@@ -14,15 +14,20 @@ public class ListeningController : MonoBehaviour {
     public GameObject StopButton;
     public GameObject Star;
     public GameObject Subtitle;
+    public GameObject TranslateButton;
+    public GameObject TranslateText;
 
     public GameObject Question;
     GameObject[] Answer;
     GameObject QuestionsBank;
     Animator m_animator;
+    PlayerStats stats = PlayerStats.instance;
 
     //private Button Play;
     
     private AudioSource audioSource;
+    private bool playWithSubtitle = false;
+    private bool playWithoutSubtitle = false;
     private bool isPaused = false;
     public bool confirm;
     bool[] CorrectAnsers;
@@ -33,8 +38,6 @@ public class ListeningController : MonoBehaviour {
     int count = 0;
     float StarScore;
     int[] Array1;
-
-    PlayerStats starStats = PlayerStats.instance;
     
 
     void Start () {
@@ -47,9 +50,9 @@ public class ListeningController : MonoBehaviour {
         //Question = GameObject.Find("Question");
         Answer = GameObject.FindGameObjectsWithTag("Option");
         CorrectAnsers = new bool[6];
-        StarScore = 0;
+        StarScore = 3;
         ScoreCalculated = false;
-        Star.SetActive(false);
+        //Star.SetActive(false);
         Array1 = new int[] { 0, 5, 12, 20, 26, 37, 56, 65, 72, 77, 83, 90, 100 };
         hasPlayed = false;
         //MultiArray = new Array {};
@@ -59,28 +62,30 @@ public class ListeningController : MonoBehaviour {
         displayStarScore();
         CalculateScore();
         DisplaySubtitle();
-
-        //Play.onClick.AddListener(PlayAudio);
+        
 
         if(audioSource.time == audioSource.clip.length)
         {
             isPaused = false;
         }
 
-        if (audioSource.time > audioSource.clip.length - 2)
+        if (audioSource.time > 5)
         {
             hasPlayed = true;
             confirm = true;
             count = 0;
             GameObject.Find("Confirm").GetComponent<Button>().enabled = true;
+            //TranslateButton.SetActive(true);
         }
 
         if (confirm && index < 6)
         {
             GameObject.Find("Question").GetComponent<Text>().text = QuestionsBank.GetComponent<Questions>().quesitonsBank[index].Question;
+            TranslateText.GetComponent<Text>().text = QuestionsBank.GetComponent<Questions>().quesitonsBank[index].TranslateQuestions;
             GameObject.Find("Answer1").GetComponentInChildren<Text>().text = QuestionsBank.GetComponent<Questions>().quesitonsBank[index].Answer1;
             GameObject.Find("Answer2").GetComponentInChildren<Text>().text = QuestionsBank.GetComponent<Questions>().quesitonsBank[index].Answer2;
             GameObject.Find("Answer3").GetComponentInChildren<Text>().text = QuestionsBank.GetComponent<Questions>().quesitonsBank[index].Answer3;
+            
             m_animator.SetBool("InOut", true);                                                  //set color and animation
             Color qColor = GameObject.Find("Question").GetComponent<Text>().color;              //  
             qColor.a = Mathf.Lerp(1, 0, Time.deltaTime / lerp);                                 //
@@ -96,6 +101,7 @@ public class ListeningController : MonoBehaviour {
         }
         else
         {
+            
             GameObject.Find("Confirm").GetComponent<Button>().enabled = false;
             Color qColor = GameObject.Find("Question").GetComponent<Text>().color;
             qColor.a = Mathf.Lerp(0, 1, Time.deltaTime / lerp);
@@ -125,10 +131,32 @@ public class ListeningController : MonoBehaviour {
 
         DisplayButtons();
 
+        if (playWithoutSubtitle)
+            PlaySutitleButton.SetActive(false);
+        if (playWithSubtitle)
+            PlayButton.SetActive(false);
+
         //Debug.Log(audioSource.isPlaying);
         //DisplaySpectrum();
             
 	}
+
+    public void PlaySubtitle()
+    {
+        playWithSubtitle = true;
+        StarScore = 1.5f;
+        Subtitle.SetActive(true);
+        if (!isPaused)
+        {
+            audioSource.Play();
+        }
+
+        else
+        {
+            audioSource.UnPause();
+            isPaused = false;
+        }
+    }
 
     public void PauseAudio()
     {
@@ -155,25 +183,17 @@ public class ListeningController : MonoBehaviour {
             PlaySutitleButton.SetActive(true);
             PauseButton.SetActive(false);
             StopButton.SetActive(false);
-        }
+        }        
 
-        
+    }
 
-    }//Update
-
+    public void ClosePanel()
+    {
+        Destroy(GameObject.Find("WelcomePanel"));
+    }
     public void Exit()
     {
-        float record = starStats.listeningRecord;
-        if (StarScore > record)
-        {
-            starStats.playerStars += StarScore;
-            SceneManager.LoadScene("Latvia");
-            starStats.listeningRecord = StarScore;
-        }
-        else
-        {
-            SceneManager.LoadScene("Latvia");
-        }
+        SceneManager.LoadScene("Latvia");
     }
 
     void DisplaySpectrum()
@@ -194,9 +214,7 @@ public class ListeningController : MonoBehaviour {
     }
 
     void DisplaySubtitle()
-
     {
-        /*
         if(audioSource.time >0 && audioSource.time< 5)
         {
             Subtitle.GetComponent<Text>().text = GameObject.Find("SubtitleText").GetComponent<SubtitleText>().text[0].paragraph;
@@ -249,7 +267,8 @@ public class ListeningController : MonoBehaviour {
         {
             Subtitle.GetComponent<Text>().text = GameObject.Find("SubtitleText").GetComponent<SubtitleText>().text[12].paragraph;
         }
-        */
+
+        
     }
 
     public void SetActiveSubtitle()
@@ -279,6 +298,7 @@ public class ListeningController : MonoBehaviour {
                     StarScore -= 0.5f;
                 }
             }
+            
 
             if (StarScore <= 0)
                 StarScore = 0;
@@ -286,11 +306,39 @@ public class ListeningController : MonoBehaviour {
             Star.SetActive(true);
             GameObject.Find("StarScorePanel2").SetActive(false);
             ScoreCalculated = true;
+
+            if (StarScore % (int)StarScore == 0.75f)
+            {
+                StarScore = StarScore + 0.25f;
+            }
+            else
+            {
+                StarScore = (int)StarScore;
+            }
+
+            float record = stats.listeningRecord;
+            if (StarScore > record)
+            {
+                stats.playerStars += StarScore - record;
+                stats.listeningRecord = StarScore;
+            }
+
+
         }
     }
 
     private void displayStarScore()
     {
+
+        if (playWithoutSubtitle && StarScore >= 3)
+        {
+            StarScore = 3;
+        }
+
+        if(playWithSubtitle && StarScore >= 1.5f)
+        {
+            StarScore = 1.5f;
+        }
         float quaterOfStar = StarScore / 0.25f;
 
         for (int i = (int)quaterOfStar; i < 12; i++)
@@ -307,9 +355,9 @@ public class ListeningController : MonoBehaviour {
     }
     public void PlayAudio()
     {
+        playWithoutSubtitle = true;
         if (!isPaused)
         {
-            Debug.Log("here");
             audioSource.Play();
         }
 
@@ -322,21 +370,38 @@ public class ListeningController : MonoBehaviour {
 
     public void isConfirmed()
     {
+        TranslateButton.SetActive(true);
+        TranslateText.SetActive(false);
         confirm = !confirm;
-        Debug.Log(confirm);
         
         int CorrectNumber = QuestionsBank.GetComponent<Questions>().quesitonsBank[index].RightAnswer;
         
         if (CorrectNumber == ButtonToggle.PlayerChoice)
         {
             CorrectAnsers[index] = true;
+            StarScore += 0.25f;
         }
         else
+        {
             CorrectAnsers[index] = false;
+            StarScore -= 0.25f;
+        }
+            
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Option"))
         {
             go.GetComponentInChildren<Text>().color = Color.cyan;
         }
         index++;
+    }
+
+    public void TranslateQuestion()
+    {
+        if (playWithoutSubtitle)
+        {
+            TranslateText.SetActive(true);
+            TranslateButton.SetActive(false);
+            StarScore -= 0.25f;
+        }
+        
     }
 }
