@@ -29,7 +29,7 @@ public class email_system : MonoBehaviour
         string body = subject1.GetComponent<Text>().text;
         if (email != "")
         {
-            Application.OpenURL("mailto:" + email + "?subject=" + subject + "&body=" + body + "\n------------------------\n \n" + end);
+            Application.OpenURL("mailto:" + email + "?subject=" + subject + "&body=" + body + "\n" + end);
 
         }
         else
