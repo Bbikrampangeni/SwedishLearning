@@ -10,8 +10,6 @@ TagManager:
   - word4
   - word5
   - word6
-  - word7
-  - word8
   layers:
   - Default
   - TransparentFX

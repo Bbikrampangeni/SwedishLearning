@@ -26,7 +26,7 @@ public class starmanger : MonoBehaviour {
     {
 
         displayStarScore();
-        if (Star<0.25f)
+        if (Star<1)
         {
             popup.SetActive(true); 
         }
