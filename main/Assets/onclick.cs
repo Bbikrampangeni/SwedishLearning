@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class onclick : MonoBehaviour {
-    public GameObject image;
+    public GameObject setting;
 
     bool isclick = false;
-    void OnMouseDown()
+   public void OnMouseDown()
     {
         isclick = !isclick;
 
@@ -16,11 +16,11 @@ public class onclick : MonoBehaviour {
 
         if (isclick)
         {
-            image.SetActive(true);
+            setting.gameObject.SetActive(true);
         }
         else
         {
-            image.SetActive(false);
+           setting.gameObject.SetActive(false);
         }
     }
 }
