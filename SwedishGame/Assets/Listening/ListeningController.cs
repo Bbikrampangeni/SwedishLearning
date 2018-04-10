@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.EventSystems;
 
 public class ListeningController : MonoBehaviour {
 
@@ -26,8 +26,8 @@ public class ListeningController : MonoBehaviour {
     //private Button Play;
     
     private AudioSource audioSource;
-    private bool playWithSubtitle = false;
-    private bool playWithoutSubtitle = false;
+    //private bool playWithSubtitle = false;
+    //private bool playWithoutSubtitle = false;
     private bool isPaused = false;
     public bool confirm;
     bool[] CorrectAnsers;
@@ -38,9 +38,13 @@ public class ListeningController : MonoBehaviour {
     int count = 0;
     float StarScore;
     int[] Array1;
-    
+
+    private EventSystem system;
+
 
     void Start () {
+
+        system = EventSystem.current;
         QuestionsBank = GameObject.Find("QuestionsBank");
         audioSource = Camera.main.GetComponent<AudioSource>();
 
@@ -55,10 +59,13 @@ public class ListeningController : MonoBehaviour {
         //Star.SetActive(false);
         Array1 = new int[] { 0, 5, 12, 20, 26, 37, 56, 65, 72, 77, 83, 90, 100 };
         hasPlayed = false;
-        //MultiArray = new Array {};
     }
 	
 	void Update () {
+
+        //Debug.Log(system.currentSelectedGameObject);
+        //Debug.Log(audioSource.isPlaying);
+        //Debug.Log(audioSource.time);
         displayStarScore();
         CalculateScore();
         DisplaySubtitle();
@@ -69,7 +76,7 @@ public class ListeningController : MonoBehaviour {
             isPaused = false;
         }
 
-        if (audioSource.time > 5)
+        if (audioSource.time > audioSource.clip.length - 5)
         {
             hasPlayed = true;
             confirm = true;
@@ -131,19 +138,35 @@ public class ListeningController : MonoBehaviour {
 
         DisplayButtons();
 
-        if (playWithoutSubtitle)
-            PlaySutitleButton.SetActive(false);
-        if (playWithSubtitle)
-            PlayButton.SetActive(false);
+        //if (playWithoutSubtitle)
+        //    PlaySutitleButton.SetActive(false);
+        //if (playWithSubtitle)
+        //    PlayButton.SetActive(false);
 
-        //Debug.Log(audioSource.isPlaying);
-        //DisplaySpectrum();
+        AudioSliderController();
             
 	}
 
+    private void AudioSliderController()
+    {
+        Debug.Log(Input.GetKey(KeyCode.Mouse0));
+        GameObject audioSlider = GameObject.Find("AudioSlider");
+        audioSlider.GetComponent<Slider>().maxValue = audioSource.clip.length;
+
+        if(system.currentSelectedGameObject == audioSlider && Input.GetMouseButtonUp(0))
+        {
+            audioSource.time = audioSlider.GetComponent<Slider>().value;
+        }
+
+        if(system.currentSelectedGameObject != audioSlider || (system.currentSelectedGameObject == audioSlider && !Input.GetKey(KeyCode.Mouse0)))
+        {
+            audioSlider.GetComponent<Slider>().value = audioSource.time;
+        }
+    }
+
     public void PlaySubtitle()
     {
-        playWithSubtitle = true;
+        //playWithSubtitle = true;
         StarScore = 1.5f;
         Subtitle.SetActive(true);
         if (!isPaused)
@@ -330,15 +353,15 @@ public class ListeningController : MonoBehaviour {
     private void displayStarScore()
     {
 
-        if (playWithoutSubtitle && StarScore >= 3)
-        {
-            StarScore = 3;
-        }
+        //if (playWithoutSubtitle && StarScore >= 3)
+        //{
+        //    StarScore = 3;
+        //}
 
-        if(playWithSubtitle && StarScore >= 1.5f)
-        {
-            StarScore = 1.5f;
-        }
+        //if(playWithSubtitle && StarScore >= 1.5f)
+        //{
+        //    StarScore = 1.5f;
+        //}
         float quaterOfStar = StarScore / 0.25f;
 
         for (int i = (int)quaterOfStar; i < 12; i++)
@@ -355,7 +378,7 @@ public class ListeningController : MonoBehaviour {
     }
     public void PlayAudio()
     {
-        playWithoutSubtitle = true;
+        //playWithoutSubtitle = true;
         if (!isPaused)
         {
             audioSource.Play();
@@ -396,12 +419,12 @@ public class ListeningController : MonoBehaviour {
 
     public void TranslateQuestion()
     {
-        if (playWithoutSubtitle)
-        {
+        //if (playWithoutSubtitle)
+        //{
             TranslateText.SetActive(true);
             TranslateButton.SetActive(false);
             StarScore -= 0.25f;
-        }
+        //}
         
     }
 }
