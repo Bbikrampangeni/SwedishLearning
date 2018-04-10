@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/ScenesTest/character select.unity
+=======
+- path: Assets/Crossword/Crossword.unity
+>>>>>>> parent of 2fb6d54... Small fix push
   isLoaded: 1
   isActive: 1
