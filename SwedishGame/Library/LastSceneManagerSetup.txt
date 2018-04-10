@@ -1,8 +1,12 @@
 sceneSetups:
 <<<<<<< HEAD
+<<<<<<< HEAD
 - path: Assets/ScenesTest/character select.unity
 =======
 - path: Assets/Crossword/Crossword.unity
 >>>>>>> parent of 2fb6d54... Small fix push
+=======
+- path: Assets/Scenes/character select.unity
+>>>>>>> parent of bd6c877... Revert "Phams stuff"
   isLoaded: 1
   isActive: 1

@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 [RequireComponent(typeof(Book))]
 public class AutoFlip : MonoBehaviour {
     public FlipMode Mode;
@@ -28,6 +30,11 @@ public class AutoFlip : MonoBehaviour {
     }
     public void FlipRightPage()
     {
+        if(GetComponent<Book>().currentPage == 18)
+        {
+            SceneManager.LoadScene("Crossword");
+        }
+
         if (isFlipping) return;
         if (ControledBook.currentPage >= ControledBook.TotalPageCount) return;
         isFlipping = true;
