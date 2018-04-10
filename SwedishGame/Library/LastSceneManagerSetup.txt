@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Crossword/Crossword.unity
+- path: Assets/Scenes/character select.unity
   isLoaded: 1
   isActive: 1
