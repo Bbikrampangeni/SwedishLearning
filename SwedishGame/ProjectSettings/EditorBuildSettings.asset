@@ -4,4 +4,25 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Pham's Scenes/BankTalk.unity
+    guid: b5ea4a9f279d37740b3ef34f42035098
+  - enabled: 1
+    path: Assets/Pham's Scenes/IntroFemale.unity
+    guid: b705d8e80527ac14487eec429fd7cd20
+  - enabled: 1
+    path: Assets/Pham's Scenes/IntroMale.unity
+    guid: 741199236fd23bd4987b519db350affb
+  - enabled: 1
+    path: Assets/ScenesTest/main.unity
+    guid: 03cb67e85a7678949a9003745fd10da1
+  - enabled: 1
+    path: Assets/ScenesTest/Latvia.unity
+    guid: fc8751b42afe0e945b20634ab9b8ae2e
+  - enabled: 1
+    path: Assets/Listening/ListeningTask.unity
+    guid: 5f27008b164b28847b1efb2d59c6d4d9
+  - enabled: 1
+    path: Assets/Crossword/Crossword.unity
+    guid: f03ed364f0b856f4089d6c48ade76ca2

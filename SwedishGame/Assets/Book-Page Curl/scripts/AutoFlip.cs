@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Book))]
 public class AutoFlip : MonoBehaviour {
+    public string NextScene = "";
     public FlipMode Mode;
     public float PageFlipTime = 1;
     public float TimeBetweenPages = 1;
@@ -30,9 +31,9 @@ public class AutoFlip : MonoBehaviour {
     }
     public void FlipRightPage()
     {
-        if(GetComponent<Book>().currentPage == 18)
+        if(GetComponent<Book>().currentPage == GetComponent<Book>().bookPages.Length - 1)
         {
-            SceneManager.LoadScene("Crossword");
+            SceneManager.LoadScene(NextScene);
         }
 
         if (isFlipping) return;

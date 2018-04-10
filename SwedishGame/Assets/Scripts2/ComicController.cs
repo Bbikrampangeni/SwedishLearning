@@ -28,7 +28,7 @@ public class ComicController : MonoBehaviour {
 
         if(isClick && Index == Pictures.Length - 1)
         {
-            SceneManager.LoadScene("BankTalk");
+            SceneManager.LoadScene("main");
         }
 
         if (isClick)
