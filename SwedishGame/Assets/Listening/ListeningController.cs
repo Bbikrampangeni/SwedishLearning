@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.EventSystems;
 
 public class ListeningController : MonoBehaviour {
 
@@ -21,26 +21,29 @@ public class ListeningController : MonoBehaviour {
     GameObject[] Answer;
     GameObject QuestionsBank;
     Animator m_animator;
-    PlayerStats stats = PlayerStats.instance;
 
     //private Button Play;
     
     private AudioSource audioSource;
-    private bool playWithSubtitle = false;
-    private bool playWithoutSubtitle = false;
     private bool isPaused = false;
     public bool confirm;
     bool[] CorrectAnsers;
     bool ScoreCalculated;
     bool hasPlayed = false;     //temporary
+    bool isTranslate;
+
     float lerp = 0.001f;
     int index;
     int count = 0;
     float StarScore;
     int[] Array1;
-    
+
+    private EventSystem system;
+
 
     void Start () {
+
+        system = EventSystem.current;
         QuestionsBank = GameObject.Find("QuestionsBank");
         audioSource = Camera.main.GetComponent<AudioSource>();
 
@@ -50,17 +53,21 @@ public class ListeningController : MonoBehaviour {
         //Question = GameObject.Find("Question");
         Answer = GameObject.FindGameObjectsWithTag("Option");
         CorrectAnsers = new bool[6];
-        StarScore = 3;
+        StarScore = 0;
         ScoreCalculated = false;
         //Star.SetActive(false);
         Array1 = new int[] { 0, 5, 12, 20, 26, 37, 56, 65, 72, 77, 83, 90, 100 };
         hasPlayed = false;
-        //MultiArray = new Array {};
+        isTranslate = false;
     }
 	
 	void Update () {
+
+        //Debug.Log(system.currentSelectedGameObject);
+        //Debug.Log(audioSource.isPlaying);
+        //Debug.Log(audioSource.time);
         displayStarScore();
-        CalculateScore();
+        //CalculateScore();
         DisplaySubtitle();
         
 
@@ -69,7 +76,7 @@ public class ListeningController : MonoBehaviour {
             isPaused = false;
         }
 
-        if (audioSource.time > 5)
+        if (audioSource.time > audioSource.clip.length - 5)
         {
             hasPlayed = true;
             confirm = true;
@@ -101,7 +108,6 @@ public class ListeningController : MonoBehaviour {
         }
         else
         {
-            
             GameObject.Find("Confirm").GetComponent<Button>().enabled = false;
             Color qColor = GameObject.Find("Question").GetComponent<Text>().color;
             qColor.a = Mathf.Lerp(0, 1, Time.deltaTime / lerp);
@@ -131,19 +137,36 @@ public class ListeningController : MonoBehaviour {
 
         DisplayButtons();
 
-        if (playWithoutSubtitle)
-            PlaySutitleButton.SetActive(false);
-        if (playWithSubtitle)
-            PlayButton.SetActive(false);
+        //if (playWithoutSubtitle)
+        //    PlaySutitleButton.SetActive(false);
+        //if (playWithSubtitle)
+        //    PlayButton.SetActive(false);
 
-        //Debug.Log(audioSource.isPlaying);
-        //DisplaySpectrum();
+        AudioSliderController();
+        //if (confirm)
+        //    isTranslate = false;
             
 	}
 
+    private void AudioSliderController()
+    {
+        GameObject audioSlider = GameObject.Find("AudioSlider");
+        audioSlider.GetComponent<Slider>().maxValue = audioSource.clip.length;
+
+        if(system.currentSelectedGameObject == audioSlider && Input.GetMouseButtonUp(0))
+        {
+            audioSource.time = audioSlider.GetComponent<Slider>().value;
+        }
+
+        if(system.currentSelectedGameObject != audioSlider || (system.currentSelectedGameObject == audioSlider && !Input.GetKey(KeyCode.Mouse0)))
+        {
+            audioSlider.GetComponent<Slider>().value = audioSource.time;
+        }
+    }
+
     public void PlaySubtitle()
     {
-        playWithSubtitle = true;
+        //playWithSubtitle = true;
         StarScore = 1.5f;
         Subtitle.SetActive(true);
         if (!isPaused)
@@ -267,8 +290,6 @@ public class ListeningController : MonoBehaviour {
         {
             Subtitle.GetComponent<Text>().text = GameObject.Find("SubtitleText").GetComponent<SubtitleText>().text[12].paragraph;
         }
-
-        
     }
 
     public void SetActiveSubtitle()
@@ -281,6 +302,7 @@ public class ListeningController : MonoBehaviour {
     public void RePlay()
     {
         SceneManager.LoadScene("ListeningTask");
+        StarScore = 0;
     }
 
     void CalculateScore()
@@ -298,7 +320,6 @@ public class ListeningController : MonoBehaviour {
                     StarScore -= 0.5f;
                 }
             }
-            
 
             if (StarScore <= 0)
                 StarScore = 0;
@@ -306,39 +327,21 @@ public class ListeningController : MonoBehaviour {
             Star.SetActive(true);
             GameObject.Find("StarScorePanel2").SetActive(false);
             ScoreCalculated = true;
-
-            if (StarScore % (int)StarScore == 0.75f)
-            {
-                StarScore = StarScore + 0.25f;
-            }
-            else
-            {
-                StarScore = (int)StarScore;
-            }
-
-            float record = stats.listeningRecord;
-            if (StarScore > record)
-            {
-                stats.playerStars += StarScore - record;
-                stats.listeningRecord = StarScore;
-            }
-
-
         }
     }
 
     private void displayStarScore()
     {
 
-        if (playWithoutSubtitle && StarScore >= 3)
-        {
-            StarScore = 3;
-        }
+        //if (playWithoutSubtitle && StarScore >= 3)
+        //{
+        //    StarScore = 3;
+        //}
 
-        if(playWithSubtitle && StarScore >= 1.5f)
-        {
-            StarScore = 1.5f;
-        }
+        //if(playWithSubtitle && StarScore >= 1.5f)
+        //{
+        //    StarScore = 1.5f;
+        //}
         float quaterOfStar = StarScore / 0.25f;
 
         for (int i = (int)quaterOfStar; i < 12; i++)
@@ -355,7 +358,7 @@ public class ListeningController : MonoBehaviour {
     }
     public void PlayAudio()
     {
-        playWithoutSubtitle = true;
+        //playWithoutSubtitle = true;
         if (!isPaused)
         {
             audioSource.Play();
@@ -379,12 +382,15 @@ public class ListeningController : MonoBehaviour {
         if (CorrectNumber == ButtonToggle.PlayerChoice)
         {
             CorrectAnsers[index] = true;
-            StarScore += 0.25f;
+            if (isTranslate)
+                StarScore += 0.25f;
+            else
+                StarScore += 0.5f;
         }
         else
         {
             CorrectAnsers[index] = false;
-            StarScore -= 0.25f;
+            //StarScore -= 0.25f;
         }
             
         foreach (GameObject go in GameObject.FindGameObjectsWithTag("Option"))
@@ -392,16 +398,14 @@ public class ListeningController : MonoBehaviour {
             go.GetComponentInChildren<Text>().color = Color.cyan;
         }
         index++;
+
+        isTranslate = false;
     }
 
     public void TranslateQuestion()
     {
-        if (playWithoutSubtitle)
-        {
-            TranslateText.SetActive(true);
-            TranslateButton.SetActive(false);
-            StarScore -= 0.25f;
-        }
-        
+        TranslateText.SetActive(true);
+        TranslateButton.SetActive(false);
+        isTranslate = true;
     }
 }
