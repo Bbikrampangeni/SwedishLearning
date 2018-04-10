@@ -11,6 +11,9 @@ public class PlayerStats : MonoBehaviour {
     public float crosswordRecord = 0;
     public float listeningRecord = 0;
     public float fillinRecord = 0;
+    public float foodTaskRecord = 0;
+
+    public bool bankVisited = false;
 
 	void Awake () {
         if (instance == null)

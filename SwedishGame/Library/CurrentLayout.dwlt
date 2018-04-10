@@ -111,7 +111,7 @@ MonoBehaviour:
   m_MinSize: {x: 917, y: 271}
   m_MaxSize: {x: 22012, y: 10021}
   vertical: 0
-  controlID: 51
+  controlID: 11
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -182,7 +182,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1185
     y: 0
-    width: 234
+    width: 282
     height: 947
   m_MinSize: {x: 234, y: 271}
   m_MaxSize: {x: 10004, y: 10021}
@@ -205,9 +205,9 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1419
+    x: 1467
     y: 0
-    width: 501
+    width: 453
     height: 947
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
@@ -321,14 +321,14 @@ MonoBehaviour:
     width: 946
     height: 926
   m_SceneLighting: 1
-  lastFramingTime: 10008.844591880756
+  lastFramingTime: 5372.482998497315
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 378.54196, y: 256.3446, z: 0}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
-    m_Value: {x: 378.54196, y: 256.3446, z: 0}
+    m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -355,9 +355,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 641.37384
+    m_Target: 22
     speed: 2
-    m_Value: 641.37384
+    m_Value: 22
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -463,7 +463,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 92
-    width: 477
+    width: 946
     height: 926
 --- !u!114 &15
 MonoBehaviour:
@@ -493,28 +493,28 @@ MonoBehaviour:
     height: 926
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 4e2f0000
-    m_LastClickedID: 12110
-    m_ExpandedIDs: ccedffffe4fbffff00000000582f0000622f0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: e052fcff7459fcfffe6ffcffc671fcff2cc3fcff26d0fcff44d9fcffaaedfcff2aeffcff20f1fcffc8fefcff2219fdff1846fdff6af0fdff325cfeff766bfeffe66ffeff9873feff8275feff6e78feff447ffefffc81feff8a8fffff7896ffffe69affffdcb4ffff58b6ffff72bbffffdcc2ffff9ecaffff8cccffff28ceffff7af5ffffe4fbfffff4ffffff00000000642e0000762e00004a3700005c3700003e3d0000503d0000223f00004c3f000044400000a06b0000706d0000dc6d0000fc7700000678000072780000e6b90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: House_of_Blackheads_Riga_Latvia (1)
+      m_OriginalName: House_of_Blackheads_Riga_Latvia (1)
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -219552
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 7}
     m_SearchString: 
   m_ExpandedScenes:
-  - Latvia
+  - ListeningTask
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -542,7 +542,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 1187
     y: 92
-    width: 230
+    width: 278
     height: 926
   m_SearchFilter:
     m_NameFilter: 
@@ -555,7 +555,7 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/ScenesTest
+    - Assets/Listening
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
@@ -566,7 +566,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 32260000
     m_LastClickedID: 9778
-    m_ExpandedIDs: 000000000c2600004a2900001e2a0000862a0000442b0000ca2e0000cc2e0000ce2e0000d02e0000d22e0000
+    m_ExpandedIDs: 000000000c260000242700004a2900001e2a0000862a0000442b0000ca2e0000cc2e0000ce2e0000d02e0000d22e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -594,21 +594,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000c260000242700004a2900001e2a0000862a0000442b0000ca2e0000cc2e0000ce2e0000d02e0000d22e0000
+    m_ExpandedIDs: 000000000c2600009c260000242700004a2900009c290000082a00001e2a0000242a0000862a0000442b0000862c0000ca2e0000cc2e0000ce2e0000d02e0000d22e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: BankTalkFemale
+      m_OriginalName: BankTalkFemale
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 10638
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -671,9 +671,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1421
+    x: 1469
     y: 92
-    width: 499
+    width: 451
     height: 926
   m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
@@ -703,11 +703,11 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1083
-    y: 100
-    width: 275
-    height: 614
-  m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/collab
+    x: 1421
+    y: 92
+    width: 499
+    height: 926
+  m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
   m_GlobalObjectTypeName: 
   m_RegisteredViewURLs:
   - https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
@@ -736,9 +736,9 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 1421
+    x: 1469
     y: 92
-    width: 499
+    width: 451
     height: 926
   m_InitialOpenURL: file:///C:/Users/User/AppData/Roaming/Unity/Packages/node_modules/unityeditor-collab-history/dist/index.html
   m_GlobalObjectTypeName: 

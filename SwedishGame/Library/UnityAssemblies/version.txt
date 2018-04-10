@@ -5,7 +5,5 @@ C:/Program Files/Unity564/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngin
 C:/Program Files/Unity564/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll
 C:/Program Files/Unity564/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll
 C:/Program Files/Unity564/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll
-C:/Program Files/Unity564/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll
 C:/Program Files/Unity564/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll
-C:/Program Files/Unity564/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll
 C:/Program Files/Unity564/Editor/Data/Managed/UnityEditor.dll

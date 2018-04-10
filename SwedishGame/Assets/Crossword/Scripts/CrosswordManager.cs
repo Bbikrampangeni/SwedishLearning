@@ -167,22 +167,39 @@ public class CrosswordManager : MonoBehaviour {
         else
             Star = (int)Star;
         isFinalChecked = true;
-        
+
+        Star = Star + 16.61f;
+
         foreach(GameObject game in GameObject.FindGameObjectsWithTag("Crossword"))
         {
             Check check = game.GetComponent<Check>();
             check.isCorrectLetterChecked = false;
             if (check.SaveChar.ToString().ToUpper() == game.GetComponent<InputField>().text)        //update text color      
-                game.transform.Find("Text").GetComponent<Text>().color = Color.blue;          
-            else          
+                game.transform.Find("Text").GetComponent<Text>().color = Color.blue;
+            else if (check.SaveChar.ToString().ToUpper() != game.GetComponent<InputField>().text)
+            {
                 game.transform.Find("Text").GetComponent<Text>().color = Color.red;
+                Star -= 0.1f;
+            }
+
+            
+
          
             if(check.SaveChar != ' ')
                 game.GetComponent<Image>().color = Color.cyan;
             game.GetComponent<InputField>().enabled = false;
         }
 
-        for(int i = 0; i < (int) Star; i++)
+        if (Star > 3)
+        {
+            Star = 3;
+        }
+        if (Star < 0.75f)
+        {
+            Star = 0;
+        }
+
+        for (int i = 0; i < (int) Star; i++)
         {
             Instantiate(StarPrefab, FinalResult.transform);
         }

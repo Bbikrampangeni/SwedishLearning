@@ -62,12 +62,12 @@ public class starmanger : MonoBehaviour
             Star = (int)Star;
         isFinalChecked = true;
 
-        float record = starStats.crosswordRecord;
+        float record = starStats.fillinRecord;
 
         if (Star > record)
         {
             PlayerStats.instance.playerStars += Star;
-            starStats.crosswordRecord = Star;
+            starStats.fillinRecord = Star;
         }
     }
 }

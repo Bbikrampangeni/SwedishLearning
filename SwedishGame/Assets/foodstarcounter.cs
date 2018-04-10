@@ -16,6 +16,7 @@ public class foodstarcounter : MonoBehaviour
     public GameObject FinalResult;
     public static bool isFinalChecked;
     public static float Star = 3;
+    PlayerStats stats = PlayerStats.instance;
     //public GameObject popup;
     private void Start()
     {
@@ -64,6 +65,12 @@ public class foodstarcounter : MonoBehaviour
         else
             Star = (int)Star;
         isFinalChecked = true;
+
+        float record = stats.foodTaskRecord;
+        if (Star > stats.foodTaskRecord)
+        {
+            stats.playerStars += Star - stats.foodTaskRecord;
+        }
     }
 }
 
