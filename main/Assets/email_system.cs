@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
 using System;
-using System.Net.Mail;
+
 
 
 public class email_system : MonoBehaviour
@@ -13,23 +13,30 @@ public class email_system : MonoBehaviour
 
     public GameObject email1;
     public GameObject subject1;
+    public GameObject error;
 
 
 
 
     public void SendEmail()
     {
-        Attachment attachment = null;
-        attachment = new Attachment("./Assets/Testtxt.txt");
+    
 
         string email = email1.GetComponent<Text>().text;
         string end = "sent from the Swedish learning game";
         string subject = "Receipe";
 
         string body = subject1.GetComponent<Text>().text;
+        if (email != "")
+        {
+            Application.OpenURL("mailto:" + email + "?subject=" + subject + "&body=" + body + "\n------------------------\n \n" + end);
 
-        Application.OpenURL("mailto:" + email + "?subject=" + subject + "&body=" + body + "\n"
-            + end + attachment);
+        }
+        else
+        {
+            error.gameObject.SetActive(true);
+        }
+
     }
 
 

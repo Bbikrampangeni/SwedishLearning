@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.16787411, g: 0.99264705, b: 0.2076908, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -378,7 +378,7 @@ MonoBehaviour:
   m_CaretColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_CustomCaretColor: 0
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
-  m_Text: xyz@mail.com
+  m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
   m_ReadOnly: 0
@@ -1079,7 +1079,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -47, y: -433}
+  m_AnchoredPosition: {x: -47, y: -474}
   m_SizeDelta: {x: 180, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &358700947
@@ -1175,7 +1175,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a17ace999887aa14fb196f6f6a916c5e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: abc017147d85d49418982b85962c289b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1536,7 +1536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &411468833
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1918,7 +1918,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -418, y: -300}
+  m_AnchoredPosition: {x: -418, y: -327}
   m_SizeDelta: {x: 377, y: 270}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &563265648
@@ -2135,7 +2135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &736260507
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2161,8 +2161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -23, y: 147.5}
-  m_SizeDelta: {x: -91, y: -675}
+  m_AnchoredPosition: {x: -22.75, y: 178}
+  m_SizeDelta: {x: -90.5, y: -736}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &736260508
 MonoBehaviour:
@@ -2265,6 +2265,80 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 755608479}
+--- !u!1 &771081413
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 771081414}
+  - component: {fileID: 771081416}
+  - component: {fileID: 771081415}
+  m_Layer: 5
+  m_Name: error_msg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &771081414
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771081413}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1184911279}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 33, y: 78.812}
+  m_SizeDelta: {x: 873, y: 99.825}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &771081415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771081413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19999993, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: d53693d0887b9e248b5e155de46d760e, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Please enter a Email address!!!
+--- !u!222 &771081416
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 771081413}
 --- !u!1 &773283739
 GameObject:
   m_ObjectHideFlags: 0
@@ -2433,8 +2507,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 26}
-  m_SizeDelta: {x: 0, y: -52}
+  m_AnchoredPosition: {x: 0.25006, y: -23}
+  m_SizeDelta: {x: -0.5, y: 46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893561200
 MonoBehaviour:
@@ -2457,9 +2531,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2b75e6f42c245e94d9914ad08d4620a1, type: 3}
-    m_FontSize: 20
-    m_FontStyle: 2
-    m_BestFit: 0
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
@@ -2468,13 +2542,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Lorem ipsum dolor sit amet, evertitur intellegam vel an, cum quod quot
-    nostro ut, diceret antiopam eu sea. Dolore laudem vis id, eu utinam dolorum admodum
-    sea. Ad novum fabulas blandit est, vel graece facilisis ut. Adolescens concludaturque
-    qui ne.\r\n\r\nCu nam erant maluisset. Sit cu adversarium delicatissimi, eu semper
-    recusabo sea, per et illum omnium eleifend. Te eos mentitum scaevola dissentiunt.
-    Ea clita audire sit, te atqui eirmod tincidunt sit. Labitur efficiantur sit an,
-    in simul contentiones concludaturque eos. In viderer invenire salutatus vel."
+  m_Text: "Latvian grey peas have always been an essential meal for Latvians and it
+    is no wonder the dish has been enlisted in the European Protected Designations
+    of Origin (PDO) list.\r\n\r\nGrey peas have long been grown in the area of Latvia
+    and they differ from ordinary peas by a larger size and a relatively shorter boiling
+    time. Nowadays grey peas with bacon are referred to as a very classical dish of
+    Latvian cuisine, during the cold season and are almost mandatory for the Christmas
+    table.\r\n\r\nTraditionally grey peas are boiled and then mixed up with fried
+    onions and bits of bacon. The meal is very simple to make though is very nutritious
+    and healthy."
 --- !u!222 &893561201
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2749,7 +2825,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1080835650
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3046,6 +3122,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1179796033
@@ -3092,8 +3179,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6610f69d4d416304e9730bb585d9a282, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  email1: {fileID: 107633795}
+  email1: {fileID: 1852590257}
   subject1: {fileID: 1645033810}
+  error: {fileID: 771081413}
 --- !u!1 &1184911278
 GameObject:
   m_ObjectHideFlags: 0
@@ -3124,6 +3212,7 @@ RectTransform:
   - {fileID: 107633796}
   - {fileID: 1245722524}
   - {fileID: 1179796031}
+  - {fileID: 771081414}
   m_Father: {fileID: 1080835650}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3314,7 +3403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 326, y: -542}
+  m_AnchoredPosition: {x: 326, y: -551}
   m_SizeDelta: {x: 377, y: 270}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1225869761
@@ -4180,7 +4269,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 2b75e6f42c245e94d9914ad08d4620a1, type: 3}
     m_FontSize: 20
     m_FontStyle: 2
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
@@ -4189,13 +4278,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Lorem ipsum dolor sit amet, evertitur intellegam vel an, cum quod quot
-    nostro ut, diceret antiopam eu sea. Dolore laudem vis id, eu utinam dolorum admodum
-    sea. Ad novum fabulas blandit est, vel graece facilisis ut. Adolescens concludaturque
-    qui ne.\r\n\r\nCu nam erant maluisset. Sit cu adversarium delicatissimi, eu semper
-    recusabo sea, per et illum omnium eleifend. Te eos mentitum scaevola dissentiunt.
-    Ea clita audire sit, te atqui eirmod tincidunt sit. Labitur efficiantur sit an,
-    in simul contentiones concludaturque eos. In viderer invenire salutatus vel."
+  m_Text: "Rye bread\r\n\r\nRye bread is the most famous Latvian dark bread. According
+    to the view of locals, proper rye-bread can only be made in Latvia and eating
+    bread is not only a physical act, but a spiritual one."
 --- !u!222 &1424620723
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4317,7 +4402,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000022888}
+  m_AnchoredPosition: {x: -0.000022888, y: 0.000022888}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1594046847
@@ -4542,7 +4627,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a17ace999887aa14fb196f6f6a916c5e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: abc017147d85d49418982b85962c289b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4736,8 +4821,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -24}
-  m_SizeDelta: {x: 0, y: 0.000030518}
+  m_AnchoredPosition: {x: 0, y: -4}
+  m_SizeDelta: {x: 0, y: -8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1645033812
 MonoBehaviour:
@@ -4761,9 +4846,9 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2b75e6f42c245e94d9914ad08d4620a1, type: 3}
     m_FontSize: 20
-    m_FontStyle: 2
-    m_BestFit: 0
-    m_MinSize: 2
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -4771,9 +4856,19 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Rye bread is the most famous Latvian dark bread. According to the view of
-    locals, proper rye-bread can only be made in Latvia and eating bread is not only
-    a physical act, but a spiritual one.
+  m_Text: "\xB7 Riga Black Balsam\r\n\r\nTraditional Latvian balsam is made with many
+    different natural ingredients mixed in pure vodka. The traditional recipe is based
+    on a composition of 24 different plants, flowers, buds, juices, roots, oils and
+    berries prepared in oak barrels and is famous for containing 24 herbal ingredients
+    which make the drink specifically healthy and aromatic. Riga black balsam is black
+    and has a bitter-sweet taste. It is rarely taken in its pure form, rather added
+    to coffee or tea. It can also be used in medicine as a cold remedy.\r\n\r\n* A
+    bottle of balsamico, glass on the side, a little salad on the plate\r\n\r\n* Bottle
+    of dark beer, \n\r\n* A bottle of light coloured beer, \n\r\n* Riga black balsam,
+    \n\r\n2.   J\u0101\u0146i cheese\r\n\r\nLatvian sour milk cheese. Traditionally
+    eaten on the Latvian celebration of the summer solstice. Basic ingredients are
+    raw quark and fresh milk, caraway seeds are traditionally added during cooking
+    as a spice. It is eaten as such or is used as a great snack to beer."
 --- !u!222 &1645033813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5258,7 +5353,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -421, y: -551}
+  m_AnchoredPosition: {x: -421, y: -556}
   m_SizeDelta: {x: 377, y: 270}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888073555
@@ -5666,7 +5761,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: a17ace999887aa14fb196f6f6a916c5e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: abc017147d85d49418982b85962c289b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
