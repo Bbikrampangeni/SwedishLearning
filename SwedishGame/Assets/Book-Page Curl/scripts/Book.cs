@@ -101,9 +101,12 @@ public class Book : MonoBehaviour {
         {
             UpdateBook();
         }
+
+        Debug.Log(currentPage);
         //Debug.Log("mouse local pos:" + transformPoint(Input.mousePosition));
         //Debug.Log("mouse  pos:" + Input.mousePosition);
     }
+    
     public void UpdateBook()
     {
         f= Vector3.Lerp(f,transformPoint( Input.mousePosition), Time.deltaTime * 10);
