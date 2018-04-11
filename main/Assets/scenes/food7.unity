@@ -2290,7 +2290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &736260507
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2773,17 +2773,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\rLettiska gr\xE5a \xE4rtor har alltid varit en viktig m\xE5ltid f\xF6r
-    latvierna och d\xE4rf\xF6r \xE4r det inte konstigt att matr\xE4tten har listats
-    p\xE5 den Europeiska listan om Skyddade ursprungsbeteckningar (en kyll\xE4 ole
-    varma kannattaako t\xE4t\xE4 edes k\xE4\xE4nt\xE4\xE4). \r\n\t\nGr\xE5a \xE4rter
-    har l\xE4nge odlats i Lettland och de skiljer sig fr\xE5n vanliga \xE4rter eftersom
+  m_Text: "Lettiska gr\xE5a \xE4rter har alltid varit en viktig m\xE5ltid f\xF6r letterna
+    och d\xE4rf\xF6r \xE4r det inte konstigt att matr\xE4tten har listats p\xE5 den
+    Europeiska listan om Skyddade ursprungsbeteckningar.\r\n\r\nGr\xE5a \xE4rter har
+    l\xE4nge odlats i Lettland och de skiljer sig fr\xE5n vanliga \xE4rter eftersom
     de \xE4r st\xF6rre och har en kortare koktid. Nuf\xF6rtiden \xE4r de gr\xE4a \xE4rterna
-    med bacon en mycket klassikt matr\xE4tt i det lettiska k\xF6ket under den kalla
-    \xE5rstiden och de \xE4r n\xE4st\xE4n obligatoriska p\xE5 julbordet.\r\nTraditionellt
-    kokas gr\xE5a \xE4rtor och blandas med stekt l\xF6k och bitar av bacon. M\xE5ltiden
-    \xE4r mycket enkelt att g\xF6ra men v\xE4ldigt n\xE4ringsrik och h\xE4lsosam.
-    \r\n"
+    med bacon en mycket klassik matr\xE4tt i det lettiska k\xF6ket under den kalla
+    \xE5rstiden och de \xE4r n\xE4st\xE4n obligatoriska p\xE5 julbordet.\r\n\r\nTraditionellt
+    kokas och blandas gr\xE5a \xE4rtor med stekt l\xF6k och baconbitar. M\xE5ltiden
+    \xE4r mycket enkel att g\xF6ra men ocks\xE5 v\xE4ldigt n\xE4ringsrik och h\xE4lsosam."
 --- !u!222 &893561201
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3207,7 +3205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1099642920
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4616,7 +4614,7 @@ MonoBehaviour:
   m_Text: "Rye bread\r\n\r\nR\xE5gbr\xF6d \xE4r det mest k\xE4nda lettiska m\xF6rka
     br\xF6det. Enligt lokalbefolkningens uppfattning kan r\xE4tt sorts r\xE5gbr\xF6d
     gr\xE4ddas endast i Lettland och att \xE4ta br\xF6det \xE4r inte bara en fysisk
-    men ocks\xE5 en andlig akt. "
+    men ocks\xE5 en andlig akt."
 --- !u!222 &1424620723
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5193,21 +5191,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xB7 Riga Black Balsam\r\n\r\nTraditionell lettiska balsam framst\xE4lls
+  m_Text: "\xB7 Riga Black Balsam\r\n\r\nTraditionell lettisk balsam framst\xE4lls
     av m\xE5nga olika naturliga ingredienser blandade i ren vodka. Det traditionella
     receptet baserar sig p\xE5 en komposition av 24 olika v\xE4xter, blommor, knoppar,
-    juice, r\xF6tter, oljor och b\xE4r. Balsam g\xF6rs i ekfat och \xE4r k\xE4nd f\xF6r
-    att inneh\xE5lla 24 v\xE4xtbaserade ingredienser som g\xF6r drickan s\xE4rskilt
-    frisk och aromatisk. Riga svart balsam \xE4r svart och har en bittert s\xF6t smak.
-    Man dricker s\xE4llan svart balsam som s\xE5dan utan  hellre blandad i kaffe eller
-    I te. Det kan ocks\xE5 anv\xE4ndas i medicin som ett kallmedel.\n\r\n* A bottle
+    juice, r\xF6tter, oljor och b\xE4r. Balsamet g\xF6rs i ekfat och \xE4r k\xE4nt
+    f\xF6r att inneh\xE5lla 24 v\xE4xtbaserade ingredienser som g\xF6r drickan s\xE4rskilt
+    frisk och aromatisk. Riga svart balsam \xE4r svart och har en bitter s\xF6t smak.
+    Man dricker s\xE4llan svart balsam som s\xE5dant utan hellre blandat i kaffe eller
+    i te. Det kan ocks\xE5 anv\xE4ndas i medicin som ett kylningsmedel.\n\r\n* A bottle
     of balsamico, glass on the side, a little salad on the plate\r\n\r\n* Bottle of
     dark beer, \n\r\n* A bottle of light coloured beer, \n\r\n* Riga black balsam,
     \n\r\n2.   J\u0101\u0146i cheese\r\n\r\nLettisk sur mj\xF6lkost. Traditionellt
     \xE4ter man mj\xF6lkost p\xE5 den lettiska sommarsolst\xE5ndsfesten. De grundl\xE4gggande
-    ingresienserna \xE4r r\xE5 kvark och f\xE4rsk mj\xF6lk, kargenfr\xF6n tillsatts
-    traditionellt som en krydda under kokandet. Man \xE4ter osten som s\xE5dant eller
-    som ett bra mellanm\xE5l med \xF6l. "
+    ingresienserna \xE4r r\xE5 kvark och f\xE4rsk mj\xF6lk samt kargenfr\xF6n som
+    traditionellt tillsattes som en krydda under kokning. Man \xE4ter osten som s\xE5dant
+    eller som ett bra mellanm\xE5l med \xF6l."
 --- !u!222 &1645033813
 CanvasRenderer:
   m_ObjectHideFlags: 0
