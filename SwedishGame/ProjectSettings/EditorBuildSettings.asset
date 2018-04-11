@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Pham's Scenes/BankTalkMale.unity
+    guid: b5ea4a9f279d37740b3ef34f42035098
+  - enabled: 1
     path: Assets/Pham's Scenes/IntroFemale.unity
     guid: b705d8e80527ac14487eec429fd7cd20
-  - enabled: 1
-    path: Assets/ScenesTest/character select.unity
-    guid: ffbb6b6e892c0fa449b5b538d1cfe1dd
   - enabled: 1
     path: Assets/Pham's Scenes/IntroMale.unity
     guid: 741199236fd23bd4987b519db350affb
@@ -18,8 +18,56 @@ EditorBuildSettings:
     path: Assets/ScenesTest/main.unity
     guid: 03cb67e85a7678949a9003745fd10da1
   - enabled: 1
+    path: Assets/Pham's Scenes/BankTalkFemale.unity
+    guid: f7f9f876b9be9c94380d2201acb0a548
+  - enabled: 1
+    path: Assets/Pham's Scenes/CarSaleFemale.unity
+    guid: 8d0465b63575672468981324c20bb1f7
+  - enabled: 1
+    path: Assets/Pham's Scenes/CarSaleMale.unity
+    guid: c6fdbca4f883b174dae7704b94d2494a
+  - enabled: 1
+    path: Assets/Pham's Scenes/CarSaleNotHavingMoneyFemale.unity
+    guid: 1a181541e4a5d134db43f7ca757e7bef
+  - enabled: 1
+    path: Assets/Pham's Scenes/CarSaleNotHavingMoneyMale.unity
+    guid: 5864f6eb7611b1946ba5f187bdb58a2f
+  - enabled: 1
+    path: Assets/Pham's Scenes/Riga.unity
+    guid: f7c68945ac428c940856edddb21868a9
+  - enabled: 1
+    path: "Assets/ScenesTest/\xB4mainblanks 1.unity"
+    guid: 67f7660be2dbe4240b9b596b51065af1
+  - enabled: 1
+    path: "Assets/ScenesTest/\xB4mainblanks.unity"
+    guid: ac13609795b714448bddb018c76cacdd
+  - enabled: 1
+    path: Assets/ScenesTest/character select.unity
+    guid: ffbb6b6e892c0fa449b5b538d1cfe1dd
+  - enabled: 1
+    path: Assets/ScenesTest/fillintheblanks.unity
+    guid: b4399f6d7412a5b4390024f41d036473
+  - enabled: 1
+    path: Assets/ScenesTest/fillit.unity
+    guid: 103a20b17c5be44498adb09914829c9a
+  - enabled: 1
+    path: Assets/ScenesTest/Flashback.unity
+    guid: 8a5e32f9866cd5142a4bb5c645542430
+  - enabled: 1
+    path: Assets/ScenesTest/food7.unity
+    guid: 31314af0a3483224aa76b14784fb6334
+  - enabled: 1
+    path: Assets/ScenesTest/introfood.unity
+    guid: f8f248770702fc740994f8e79493e768
+  - enabled: 1
     path: Assets/ScenesTest/Latvia.unity
     guid: 728a38f52200c0a4a91269bb0069684a
+  - enabled: 1
+    path: Assets/ScenesTest/loading screen.unity
+    guid: 1f5b7639927be1c40918c9fd34c10413
+  - enabled: 1
+    path: Assets/ScenesTest/Start.unity
+    guid: 211e7b4167689cb4091e26764ae99218
   - enabled: 0
     path: 
     guid: fc8751b42afe0e945b20634ab9b8ae2e
@@ -30,8 +78,5 @@ EditorBuildSettings:
     path: Assets/Crossword/Crossword.unity
     guid: f03ed364f0b856f4089d6c48ade76ca2
   - enabled: 1
-    path: Assets/Pham's Scenes/BankTalkMale.unity
-    guid: b5ea4a9f279d37740b3ef34f42035098
-  - enabled: 1
-    path: Assets/Pham's Scenes/Riga.unity
+    path: Assets/ScenesTest/TheEnd.unity
     guid: 00000000000000000000000000000000

@@ -39,7 +39,7 @@ public class ListeningController : MonoBehaviour {
     int[] Array1;
 
     private EventSystem system;
-
+    PlayerStats stats = PlayerStats.instance;
 
     void Start () {
 
@@ -323,6 +323,22 @@ public class ListeningController : MonoBehaviour {
 
             if (StarScore <= 0)
                 StarScore = 0;
+
+            if (StarScore % (int)StarScore == 0.75f )
+            {
+                StarScore = StarScore + 0.25f;
+            }
+            else
+            {
+                StarScore = (int)StarScore;
+            }
+
+            float record = stats.listeningRecord;
+            if (StarScore > stats.listeningRecord)
+            {
+                stats.playerStars = StarScore - stats.listeningRecord;
+                stats.listeningRecord = StarScore;
+            }
 
             Star.SetActive(true);
             GameObject.Find("StarScorePanel2").SetActive(false);
