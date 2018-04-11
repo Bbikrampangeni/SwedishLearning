@@ -3709,6 +3709,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 1153685711}
     m_Modifications:
+    - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224733880839201876, guid: deaa67e17dc932b43a3a2949b214cb68,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -3798,6 +3803,36 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: deaa67e17dc932b43a3a2949b214cb68, type: 2}

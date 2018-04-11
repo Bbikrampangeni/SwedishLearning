@@ -28,6 +28,7 @@ public class starmanger : MonoBehaviour {
         displayStarScore();
         if (Star<0.25f)
         {
+           
             popup.SetActive(true); 
         }
         if (isreplay)
