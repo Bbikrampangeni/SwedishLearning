@@ -167,7 +167,7 @@ public class ListeningController : MonoBehaviour {
     public void PlaySubtitle()
     {
         //playWithSubtitle = true;
-        StarScore = 1.5f;
+//StarScore = 1.5f;
         Subtitle.SetActive(true);
         if (!isPaused)
         {

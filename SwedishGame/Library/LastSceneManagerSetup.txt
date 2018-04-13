@@ -1,4 +1,4 @@
 sceneSetups:
-- path: "Assets/ScenesTest/\xB4mainblanks.unity"
+- path: Assets/ScenesTest/food7.unity
   isLoaded: 1
   isActive: 1
