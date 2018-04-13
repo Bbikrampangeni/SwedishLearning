@@ -7,7 +7,7 @@ public class nextscene : MonoBehaviour {
 
      PlayerStats starStats = PlayerStats.instance;
 	// Use this for initialization
-	public void next(int nextscene)
+	public void next(string nextscene)
     {
         starmanger.Star = 3;
         SceneManager.LoadScene(nextscene);

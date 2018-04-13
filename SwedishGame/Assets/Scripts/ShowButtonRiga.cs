@@ -18,6 +18,17 @@ public class ShowButtonRiga : MonoBehaviour {
             
         }
 	}
+
+    public void ShowRigaCheat()
+    {
+        if (starStats.playerStars > 4)
+        {
+            Color rigaImageUnfaded = rigaImage.color;
+            rigaImageUnfaded.a = 1f;
+            rigaImage.color = rigaImageUnfaded;
+
+        }
+    }
 	
 	
 }

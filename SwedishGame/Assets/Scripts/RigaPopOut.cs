@@ -29,5 +29,18 @@ public class RigaPopOut : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
     }
 
+    public void RigaShowButtonCheat()
+    {
+        if (PlayerStats.instance.playerStars > 4)
+        {
+            rigaEnabled = true;
+        }
+    }
+
+    public void Cheat()
+    {
+        PlayerStats.instance.playerStars = 8;
+    }
+
     
 }
