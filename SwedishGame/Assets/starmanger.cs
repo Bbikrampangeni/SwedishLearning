@@ -63,10 +63,9 @@ public class starmanger : MonoBehaviour
         isFinalChecked = true;
 
         float record = starStats.fillinRecord;
-
         if (Star > record)
         {
-            PlayerStats.instance.playerStars += Star;
+            PlayerStats.instance.playerStars += Star - PlayerStats.instance.fillinRecord;
             starStats.fillinRecord = Star;
         }
     }

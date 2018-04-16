@@ -16,11 +16,13 @@ public class foodstarcounter : MonoBehaviour
     public GameObject FinalResult;
     public static bool isFinalChecked;
     public static float Star = 3;
+    public static float playerStars = 0;
     PlayerStats stats = PlayerStats.instance;
     //public GameObject popup;
     private void Start()
     {
-
+        Star = 3;
+        playerStars = 0;
         isFinalChecked = false;
         isreplay = false;
     }
@@ -60,16 +62,17 @@ public class foodstarcounter : MonoBehaviour
     }
     public void FinalCheck()
     {
-        if (Star % (int)Star == 0.75f)          //round the score
-            Star = Star + 0.25f;
+        if (playerStars % (int)playerStars == 0.75f)          //round the score
+            playerStars = playerStars + 0.25f;
         else
-            Star = (int)Star;
+            playerStars = (int)playerStars;
         isFinalChecked = true;
 
         float record = stats.foodTaskRecord;
-        if (Star > stats.foodTaskRecord)
+        if (playerStars > record)
         {
-            stats.playerStars += Star - stats.foodTaskRecord;
+            stats.playerStars += playerStars - stats.foodTaskRecord;
+            stats.foodTaskRecord = playerStars;
         }
     }
 }

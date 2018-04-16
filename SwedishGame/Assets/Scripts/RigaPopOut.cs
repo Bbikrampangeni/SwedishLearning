@@ -3,11 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class RigaPopOut : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
+public class RigaPopOut : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler {
 
     public Image rigaImage;
     bool rigaEnabled = false;
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (rigaEnabled == true)
+        {
+            SceneManager.LoadScene("Riga");
+        }
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (rigaEnabled == true)
@@ -16,6 +26,8 @@ public class RigaPopOut : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
     }
 
+ 
+
     public void OnPointerExit(PointerEventData eventData)
     {
         rigaImage.transform.localScale = new Vector3(1, 1, 1);
@@ -23,12 +35,13 @@ public class RigaPopOut : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     void Start()
     {
-        if (PlayerStats.instance.playerStars > 4)
+        if (PlayerStats.instance.playerStars >= 8)
         {
             rigaEnabled = true;
         }
     }
-
+    // For testing only
+    /*
     public void RigaShowButtonCheat()
     {
         if (PlayerStats.instance.playerStars > 4)
@@ -41,6 +54,6 @@ public class RigaPopOut : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         PlayerStats.instance.playerStars = 8;
     }
-
+    */
     
 }

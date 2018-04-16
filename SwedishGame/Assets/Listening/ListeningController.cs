@@ -37,6 +37,7 @@ public class ListeningController : MonoBehaviour {
     int count = 0;
     float StarScore;
     int[] Array1;
+    
 
     private EventSystem system;
     PlayerStats stats = PlayerStats.instance;
@@ -120,6 +121,7 @@ public class ListeningController : MonoBehaviour {
                 go.GetComponentInChildren<Text>().color = color;
                 lerp += 0.002f;
             }
+            
             m_animator.SetBool("InOut", false);
             count++;
             if (hasPlayed)
@@ -129,6 +131,7 @@ public class ListeningController : MonoBehaviour {
                     count = 0;
                     confirm = true;
                     GameObject.Find("Confirm").GetComponent<Button>().enabled = true;
+                    
                 }
             }
             
@@ -305,25 +308,28 @@ public class ListeningController : MonoBehaviour {
         StarScore = 0;
     }
 
-    void CalculateScore()
+    public void CalculateScore()
     {
+        Debug.Log("First score" + StarScore);
+       
         if(index >= 6 && !ScoreCalculated)
         {
             for(int i = 0; i < CorrectAnsers.Length; i++)
             {
                 if(CorrectAnsers[i] == true)
                 {
-                    StarScore += 0.5f;
+                    StarScore += 0.0f;
                 }
                 else
                 {
-                    StarScore -= 0.5f;
+                    StarScore += 0.0f;
                 }
             }
-
+                
             if (StarScore <= 0)
                 StarScore = 0;
 
+            Debug.Log("Second score" + StarScore);
             if (StarScore % (int)StarScore == 0.75f )
             {
                 StarScore = StarScore + 0.25f;
@@ -333,16 +339,16 @@ public class ListeningController : MonoBehaviour {
                 StarScore = (int)StarScore;
             }
 
-            float record = stats.listeningRecord;
-            if (StarScore > stats.listeningRecord)
-            {
-                stats.playerStars = StarScore - stats.listeningRecord;
-                stats.listeningRecord = StarScore;
-            }
-
             Star.SetActive(true);
             GameObject.Find("StarScorePanel2").SetActive(false);
             ScoreCalculated = true;
+
+            float record = stats.listeningRecord;
+            if (StarScore > stats.listeningRecord)
+            {
+                stats.playerStars += StarScore - stats.listeningRecord;
+                stats.listeningRecord = StarScore;
+            }
         }
     }
 
@@ -399,9 +405,35 @@ public class ListeningController : MonoBehaviour {
         {
             CorrectAnsers[index] = true;
             if (isTranslate)
+            {
                 StarScore += 0.25f;
+                stats.listeningRecord += 0.25f;
+                if (stats.listeningRecord <= 3f)
+                {
+                    stats.playerStars += 0.25f;
+                }
+                else
+                {
+                    stats.listeningRecord = 3;
+                }
+                
+            }
+
             else
+            {
                 StarScore += 0.5f;
+                stats.listeningRecord += 0.5f;
+                if (stats.listeningRecord <= 3f)
+                {
+                    stats.playerStars += 0.5f;
+                }
+                else
+                {
+                    stats.listeningRecord = 3;
+                }
+                
+            }
+                
         }
         else
         {

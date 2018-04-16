@@ -10,7 +10,7 @@ public class ShowButtonRiga : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        if (starStats.playerStars > 4)
+        if (starStats.playerStars >= 8)
         {
            Color rigaImageUnfaded = rigaImage.color;
            rigaImageUnfaded.a = 1f;
@@ -18,7 +18,8 @@ public class ShowButtonRiga : MonoBehaviour {
             
         }
 	}
-
+    // For testing only
+    /*
     public void ShowRigaCheat()
     {
         if (starStats.playerStars > 4)
@@ -29,6 +30,6 @@ public class ShowButtonRiga : MonoBehaviour {
 
         }
     }
-	
+	*/
 	
 }
