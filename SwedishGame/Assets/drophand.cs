@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class drophand : MonoBehaviour, IDropHandler{
     private Text text;
-  
+    public static int correctAnswers = 0;
    
 
 
@@ -34,9 +34,11 @@ get
                 draghandler.itemdrag.transform.SetParent(transform);
                 text = draghandler.itemdrag.GetComponent<Text>();
                 text.color = Color.green;
+                correctAnswers++;
+
            
             GetComponent<CanvasGroup>().blocksRaycasts = true;
-
+            Debug.Log(correctAnswers);
         }
        
        else  if(item && this.gameObject.tag == draghandler.itemdrag.tag)

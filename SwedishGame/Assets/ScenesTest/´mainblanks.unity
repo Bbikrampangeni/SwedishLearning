@@ -5000,6 +5000,7 @@ GameObject:
   - component: {fileID: 1527744763}
   - component: {fileID: 1527744765}
   - component: {fileID: 1527744766}
+  - component: {fileID: 1527744767}
   m_Layer: 0
   m_Name: _manager
   m_TagString: Untagged
@@ -5056,6 +5057,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6746bf95588e3c04da2d9bc198cdeada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1527744767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1527744762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e037f26e1f13dc4e801d2c300f9c277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctAnswers: 0
+  sendButton: {fileID: 1513388695}
 --- !u!1 &1553028180
 GameObject:
   m_ObjectHideFlags: 0

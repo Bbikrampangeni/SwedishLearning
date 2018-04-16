@@ -9,10 +9,12 @@ public class draghandler : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDrag
     public static GameObject itemdrag;
     Vector3 startposition;
     Transform startparent;
+    
 
 
     private void Awake()
     {
+        
         text = GetComponent<Text>();
     }
     public void OnBeginDrag(PointerEventData eventData)
@@ -40,6 +42,7 @@ public class draghandler : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDrag
         if (this.gameObject == startparent&&this.gameObject.tag == itemdrag.tag)
         {
             text.color = Color.green;
+            
            
         }
     }
@@ -53,8 +56,8 @@ public class draghandler : MonoBehaviour,IBeginDragHandler,IDragHandler,IEndDrag
             transform.position = startposition;
             GetComponent<CanvasGroup>().blocksRaycasts = true;
         }
-        
 
+   
 
 
 
