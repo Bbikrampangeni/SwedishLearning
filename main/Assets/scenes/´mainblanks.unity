@@ -274,7 +274,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 183.5, y: -427}
+  m_AnchoredPosition: {x: 137, y: -427}
   m_SizeDelta: {x: 250, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133237995
@@ -533,9 +533,9 @@ RectTransform:
   m_Father: {fileID: 1153685711}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150.5, y: -883}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 150.5, y: 197}
   m_SizeDelta: {x: 253, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &240262931
@@ -1260,9 +1260,9 @@ RectTransform:
   m_Father: {fileID: 1153685711}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 154.5, y: -777}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 154.5, y: 303}
   m_SizeDelta: {x: 250, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &503888518
@@ -1495,8 +1495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 711, y: -289.5}
-  m_SizeDelta: {x: 229, y: 50.001}
+  m_AnchoredPosition: {x: 703, y: -294}
+  m_SizeDelta: {x: 221, y: 80.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &620321084
 GameObject:
@@ -2224,8 +2224,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1989, y: -232.75}
-  m_SizeDelta: {x: 302, y: 53.5}
+  m_AnchoredPosition: {x: 1972.5, y: -245}
+  m_SizeDelta: {x: 334, y: 71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &912134318
 CanvasGroup:
@@ -2281,7 +2281,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ' AMORTERINGSPLAN'
+  m_Text: AMORTERINGSPLAN
 --- !u!222 &912134321
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2665,7 +2665,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2b75e6f42c245e94d9914ad08d4620a1, type: 3}
     m_FontSize: 20
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 265
@@ -2680,14 +2680,14 @@ MonoBehaviour:
     address, personnummer, ort\r)\n\n\r\n                    ..................................................(Namn/Firma,
     address, personnummer, ort\r)\n\r\n1.     L\xE5nesumma\r     (Amount of load)\n\r\n
     \                                                                            L\xE5ngivaren
-    ger l\xE5ntagaren................................... ..............................(To
-    lend) ______  kronor enligt villkoren I detta skuldebrev.\r\n\r\n\n\n(2)    ........................................................(Payment
-    of loan)\r\n\r\n                                                                           Enligt
-    \xF6verenskommelse    .........................................................
-    (Parties) emellan.\r\n\n\r\n(3)    ..............................................
-    .........(Period of loan)\r\n\r\n                                                                          Detta
+    ger l\xE5ntagaren......................................................................................................(To
+    lend) ______  kronor enligt villkoren I detta skuldebrev.\r\n\r\n\n\n(2)    .................................................................................(Payment
+    of loan)\r\n\n                                                                            Enligt
+    \xF6verenskommelse  ...... ...........................................................................(Parties)
+    emellan.\r\n\n\r\n(3)    ................................................................................(Period
+    of loan)\r\n\r\n                                                                          Detta
     l\xE5n \xE4r giltigt I x m\xE5nader r\xE4knad fr\xE5n X datum (System time = the
-    date you play)\r\n\r\n(4)    .......................................................(Place
+    date you play)\r\n\r\n(4) .....................................................................................(Place
     and time of repayment)\r\n\r\n                                                                        Amortering
     skall ske varje m\xE5nad, den tredje vardagen fr\xE5n och med den X med ett belopp
     p\xE5 X euro intill dess att skulden i sin helhet har betalats.\r\n\r\n(5)   Om
@@ -2738,7 +2738,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2121, y: -229}
+  m_AnchoredPosition: {x: 2076.5, y: -229}
   m_SizeDelta: {x: 41, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066968329
@@ -3286,8 +3286,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00010896, y: 0.000018506}
-  m_SizeDelta: {x: -0.00024414, y: -0.00012207}
+  m_AnchoredPosition: {x: 0.000041962, y: -0.24999}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1153685712
 MonoBehaviour:
@@ -3712,7 +3712,7 @@ Prefab:
     - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224733880839201876, guid: deaa67e17dc932b43a3a2949b214cb68,
         type: 2}
@@ -3807,7 +3807,7 @@ Prefab:
     - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
         type: 2}
@@ -3818,11 +3818,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1527744763}
     - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: next
       objectReference: {fileID: 0}
     - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
         type: 2}
@@ -3833,6 +3833,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114981709243260372, guid: deaa67e17dc932b43a3a2949b214cb68,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: deaa67e17dc932b43a3a2949b214cb68, type: 2}
@@ -4165,9 +4170,9 @@ RectTransform:
   m_Father: {fileID: 1153685711}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 713.5, y: -537}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -868, y: -501}
   m_SizeDelta: {x: 279, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1431506092
@@ -4658,7 +4663,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1513388698}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1527744763}
+        m_MethodName: next
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1513388698
@@ -4917,7 +4933,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 191.5, y: -358}
+  m_AnchoredPosition: {x: 140, y: -358}
   m_SizeDelta: {x: 250, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1559648779
@@ -5932,10 +5948,10 @@ RectTransform:
   m_Father: {fileID: 1153685711}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2015, y: -294}
-  m_SizeDelta: {x: 479, y: 74.25}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 687.5, y: 215.06}
+  m_SizeDelta: {x: -2167, y: -943.88}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1837002209
 GameObject:
@@ -6388,9 +6404,9 @@ RectTransform:
   m_Father: {fileID: 1153685711}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 680.5, y: -694}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -922, y: -641}
   m_SizeDelta: {x: 250, y: 68}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1969545877
@@ -6901,8 +6917,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1728, y: -234}
-  m_SizeDelta: {x: 41, y: 47}
+  m_AnchoredPosition: {x: 1728.5, y: -234}
+  m_SizeDelta: {x: 42, y: 47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2082751334
 MonoBehaviour:
