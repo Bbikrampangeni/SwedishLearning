@@ -9,6 +9,7 @@ public class settings_menu : MonoBehaviour
     public AudioMixer audiomixer;
     Resolution[] resolutions;
     public Dropdown resolutiondropdown;
+    public GameObject Setting;
 
 
     private void Start()
@@ -64,6 +65,7 @@ public class settings_menu : MonoBehaviour
     }
     public void quit()
     {
-        Application.Quit();
+        //Application.Quit();
+        Setting.SetActive(false);
     }
 }

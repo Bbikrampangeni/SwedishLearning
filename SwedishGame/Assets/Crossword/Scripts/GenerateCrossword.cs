@@ -70,7 +70,7 @@ public class GenerateCrossword : MonoBehaviour {
     void ReadAndLoadText()
     {
         int i = 0;
-        string[] CrosswordFiles = { "Assets/Resources/FirstCrossword.txt", "Assets/Resources/SecondCrossword.txt" };
+        string[] CrosswordFiles = { "SwedishGame_data/Resources/FirstCrossword.txt", "SwedishGame_data/Resources/SecondCrossword.txt" };
         System.Random random = new System.Random();
 
         int randomNumber = random.Next(0, CrosswordFiles.Length);

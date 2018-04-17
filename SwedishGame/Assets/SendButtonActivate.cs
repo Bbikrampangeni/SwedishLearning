@@ -9,6 +9,7 @@ public class SendButtonActivate : MonoBehaviour {
 
     private void Start()
     {
+        drophand.correctAnswers = 0;
         sendButton.SetActive(false);
     }
 
