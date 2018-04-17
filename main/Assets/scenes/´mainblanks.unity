@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -288,7 +288,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa0d45af5edb544b8cd730dd634753c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn: {fileID: 2082751332}
 --- !u!114 &133237996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,6 +426,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1020537393753854, guid: 023a83393e41825428449296479ef621,
     type: 2}
   m_PrefabInternal: {fileID: 2028572679}
+--- !u!224 &229987231 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224898817411491850, guid: 023a83393e41825428449296479ef621,
+    type: 2}
+  m_PrefabInternal: {fileID: 2028572679}
 --- !u!1 &232304983
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa0d45af5edb544b8cd730dd634753c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn: {fileID: 1066968327}
 --- !u!114 &240262933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,7 +1279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa0d45af5edb544b8cd730dd634753c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn: {fileID: 1282993763}
 --- !u!114 &503888519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3250,7 +3252,7 @@ RectTransform:
   - {fileID: 1037761825}
   - {fileID: 1998206066}
   - {fileID: 2012742928}
-  - {fileID: 2028572680}
+  - {fileID: 229987231}
   - {fileID: 538182955}
   - {fileID: 2071552607}
   - {fileID: 1739395446}
@@ -4186,7 +4188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa0d45af5edb544b8cd730dd634753c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn: {fileID: 1505332152}
 --- !u!114 &1431506093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4853,6 +4854,7 @@ GameObject:
   - component: {fileID: 1527744764}
   - component: {fileID: 1527744763}
   - component: {fileID: 1527744765}
+  - component: {fileID: 1527744766}
   m_Layer: 0
   m_Name: _manager
   m_TagString: Untagged
@@ -4898,7 +4900,19 @@ MonoBehaviour:
   StarObject: {fileID: 229987230}
   StarPrefab: {fileID: 1991674227236152, guid: d95b3f9a611a52e4e92aecd76c0b5fa7, type: 2}
   FinalResult: {fileID: 0}
-  popup: {fileID: 847612676}
+--- !u!114 &1527744766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1527744762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e037f26e1f13dc4e801d2c300f9c277, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  correctAnswers: 0
+  sendButton: {fileID: 1513388695}
 --- !u!1 &1559648777
 GameObject:
   m_ObjectHideFlags: 0
@@ -4947,7 +4961,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa0d45af5edb544b8cd730dd634753c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn: {fileID: 1136618040}
 --- !u!114 &1559648780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5200,7 +5213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa0d45af5edb544b8cd730dd634753c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn: {fileID: 1701222023}
 --- !u!114 &1630276514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6420,7 +6432,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa0d45af5edb544b8cd730dd634753c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btn: {fileID: 2095765682}
 --- !u!114 &1969545878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6609,11 +6620,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 023a83393e41825428449296479ef621, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &2028572680 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224895108093037978, guid: 023a83393e41825428449296479ef621,
-    type: 2}
-  m_PrefabInternal: {fileID: 2028572679}
 --- !u!1 &2033852879
 GameObject:
   m_ObjectHideFlags: 0

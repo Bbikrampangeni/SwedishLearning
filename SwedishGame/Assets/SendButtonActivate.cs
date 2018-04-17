@@ -15,7 +15,7 @@ public class SendButtonActivate : MonoBehaviour {
     private void Update()
     {
         correctAnswers = drophand.correctAnswers;
-        if (correctAnswers == 8)
+        if (correctAnswers == 7)
         {
             sendButton.SetActive(true);
         }

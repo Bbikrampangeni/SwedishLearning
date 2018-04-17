@@ -1,5 +1,5 @@
 5.6.4f1:3.3.0.2
-WebGL
+StandaloneWindows64
 C:/Program Files/Unity564/Editor/Data/Managed/UnityEngine.dll
 C:/Program Files/Unity564/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll
 C:/Program Files/Unity564/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll

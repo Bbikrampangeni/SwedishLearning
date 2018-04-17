@@ -108,6 +108,122 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1294919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1294920}
+  - component: {fileID: 1294923}
+  - component: {fileID: 1294922}
+  - component: {fileID: 1294921}
+  m_Layer: 5
+  m_Name: Scrollbar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1294920
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1294919}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 583854457}
+  m_Father: {fileID: 1080835650}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -17.5, y: 0.0000076293945}
+  m_SizeDelta: {x: 34.918945, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1294921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1294919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2061169968, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1563105868}
+  m_HandleRect: {fileID: 1563105867}
+  m_Direction: 2
+  m_Value: 1
+  m_Size: 0.37327188
+  m_NumberOfSteps: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.Scrollbar+ScrollEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &1294922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1294919}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1294923
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1294919}
 --- !u!224 &1972551 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224733880839201876, guid: deaa67e17dc932b43a3a2949b214cb68,
@@ -199,14 +315,13 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 773283740}
-  - {fileID: 985601324}
+  - {fileID: 279575976}
   - {fileID: 490695501}
   - {fileID: 1972551}
   - {fileID: 431401596}
   - {fileID: 736260507}
   - {fileID: 1080835650}
   - {fileID: 1099642920}
-  - {fileID: 1389603564}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -484,6 +599,88 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 124147264}
+--- !u!1 &172560841
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 172560842}
+  - component: {fileID: 172560844}
+  - component: {fileID: 172560843}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &172560842
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172560841}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.99999243, y: 0.99999243, z: 0.99999243}
+  m_Children: []
+  m_Father: {fileID: 733207258}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.24990845, y: -0.000015258789}
+  m_SizeDelta: {x: -0.5, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &172560843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172560841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 2b75e6f42c245e94d9914ad08d4620a1, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Latvian grey peas have always been an essential meal for Latvians and it
+    is no wonder the dish has been enlisted in the European Protected Designations
+    of Origin (PDO) list.\r\n\r\nGrey peas have long been grown in the area of Latvia
+    and they differ from ordinary peas by a larger size and a relatively shorter boiling
+    time. Nowadays grey peas with bacon are referred to as a very classical dish of
+    Latvian cuisine, during the cold season and are almost mandatory for the Christmas
+    table.\r\n\r\nTraditionally grey peas are boiled and then mixed up with fried
+    onions and bits of bacon. The meal is very simple to make though is very nutritious
+    and healthy."
+--- !u!222 &172560844
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172560841}
 --- !u!1 &213381953
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,7 +1064,7 @@ RectTransform:
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 1080835650}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1003,6 +1200,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710e0c5ec4925964c9877cda7d7ecc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!224 &279575976 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224898817411491850, guid: 023a83393e41825428449296479ef621,
+    type: 2}
+  m_PrefabInternal: {fileID: 985601323}
 --- !u!1 &343176973
 GameObject:
   m_ObjectHideFlags: 0
@@ -1234,7 +1436,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b407c7957f19c6489f3f59faaab0dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameobject: {fileID: 343176973}
+  gameobject: {fileID: 0}
 --- !u!114 &358700951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1310,7 +1512,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1080835650}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1514,7 +1716,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1080835650}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1651,7 +1853,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1080835650}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1948,7 +2150,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1080835650}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2117,6 +2319,40 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 563265646}
+--- !u!1 &583854456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 583854457}
+  m_Layer: 5
+  m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &583854457
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 583854456}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1563105867}
+  m_Father: {fileID: 1294920}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -20, y: -20}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &649401885 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1146000836106962, guid: 684cf6e90f1aa7542ad617af23800021,
@@ -2150,6 +2386,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 893561199}
+  - {fileID: 172560842}
   m_Father: {fileID: 736260507}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2443,7 +2680,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.099981, y: 0.000014717}
+  m_AnchoredPosition: {x: -0.0020751953, y: -0.00015258789}
   m_SizeDelta: {x: -0.19995117, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &773283741
@@ -2479,6 +2716,82 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 773283739}
+--- !u!1 &816484402
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 816484403}
+  - component: {fileID: 816484405}
+  - component: {fileID: 816484404}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &816484403
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816484402}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999925, y: 0.9999925, z: 0.9999925}
+  m_Children: []
+  m_Father: {fileID: 1238670893}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000061035156, y: 25.000046}
+  m_SizeDelta: {x: 0, y: -50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &816484404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816484402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 2b75e6f42c245e94d9914ad08d4620a1, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 2
+    m_BestFit: 1
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Rye bread\r\n\r\nRye bread is the most famous Latvian dark bread. According
+    to the view of locals, proper rye-bread can only be made in Latvia and eating
+    bread is not only a physical act, but a spiritual one."
+--- !u!222 &816484405
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816484402}
 --- !u!1 &827329600
 GameObject:
   m_ObjectHideFlags: 0
@@ -2507,7 +2820,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1080835650}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2558,7 +2871,7 @@ GameObject:
   - component: {fileID: 893561201}
   - component: {fileID: 893561200}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Text-swedish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2614,15 +2927,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Latvian grey peas have always been an essential meal for Latvians and it
-    is no wonder the dish has been enlisted in the European Protected Designations
-    of Origin (PDO) list.\r\n\r\nGrey peas have long been grown in the area of Latvia
-    and they differ from ordinary peas by a larger size and a relatively shorter boiling
-    time. Nowadays grey peas with bacon are referred to as a very classical dish of
-    Latvian cuisine, during the cold season and are almost mandatory for the Christmas
-    table.\r\n\r\nTraditionally grey peas are boiled and then mixed up with fried
-    onions and bits of bacon. The meal is very simple to make though is very nutritious
-    and healthy."
+  m_Text: "Lettiska gr\xE5a \xE4rter har alltid varit en viktig m\xE5ltid f\xF6r letterna
+    och d\xE4rf\xF6r \xE4r det inte konstigt att matr\xE4tten har listats p\xE5 den
+    Europeiska listan om Skyddade ursprungsbeteckningar.\r\n\r\nGr\xE5a \xE4rter har
+    l\xE4nge odlats i Lettland och de skiljer sig fr\xE5n vanliga \xE4rter eftersom
+    de \xE4r st\xF6rre och har en kortare koktid. Nuf\xF6rtiden \xE4r de gr\xE4a \xE4rterna
+    med bacon en mycket klassik matr\xE4tt i det lettiska k\xF6ket under den kalla
+    \xE5rstiden och de \xE4r n\xE4st\xE4n obligatoriska p\xE5 julbordet.\r\n\r\nTraditionellt
+    kokas och blandas gr\xE5a \xE4rtor med stekt l\xF6k och baconbitar. M\xE5ltiden
+    \xE4r mycket enkel att g\xF6ra men ocks\xE5 v\xE4ldigt n\xE4ringsrik och h\xE4lsosam."
 --- !u!222 &893561201
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2875,62 +3188,62 @@ Prefab:
     - target: {fileID: 224027398197661356, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -232.29993
+      value: -224
       objectReference: {fileID: 0}
     - target: {fileID: 224866459459860412, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -208.9
+      value: -201.70004
       objectReference: {fileID: 0}
     - target: {fileID: 224268975842695044, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -208.89996
+      value: -201.70004
       objectReference: {fileID: 0}
     - target: {fileID: 224482004581464958, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -185.49995
+      value: -179
       objectReference: {fileID: 0}
     - target: {fileID: 224843820575969610, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 20.799927
+      value: 29
       objectReference: {fileID: 0}
     - target: {fileID: 224490962186426702, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 43.899918
+      value: 52.000008
       objectReference: {fileID: 0}
     - target: {fileID: 224443868055826072, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -0.8
+      value: 6.9999924
       objectReference: {fileID: 0}
     - target: {fileID: 224737329189200318, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 20.899979
+      value: 28.999992
       objectReference: {fileID: 0}
     - target: {fileID: 224737329189200318, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -20.800003
+      value: -20.000023
       objectReference: {fileID: 0}
     - target: {fileID: 224490962186426702, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 1.4999986
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 224443868055826072, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 1.9
+      value: 2.999978
       objectReference: {fileID: 0}
     - target: {fileID: 224843820575969610, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 24.5
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 224895108093037978, guid: 023a83393e41825428449296479ef621,
         type: 2}
@@ -2947,89 +3260,79 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -299
       objectReference: {fileID: 0}
-    - target: {fileID: 224737329189200318, guid: 023a83393e41825428449296479ef621,
-        type: 2}
-      propertyPath: m_SizeDelta.x
-      value: 63
-      objectReference: {fileID: 0}
-    - target: {fileID: 224737329189200318, guid: 023a83393e41825428449296479ef621,
-        type: 2}
-      propertyPath: m_SizeDelta.y
-      value: 87.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 224027398197661356, guid: 023a83393e41825428449296479ef621,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 1.1999111
-      objectReference: {fileID: 0}
     - target: {fileID: 224268975842695044, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 23.199944
+      value: 24.000023
       objectReference: {fileID: 0}
     - target: {fileID: 224482004581464958, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 1.1999111
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224027398197661356, guid: 023a83393e41825428449296479ef621,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.9999938
       objectReference: {fileID: 0}
     - target: {fileID: 224866459459860412, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -20.3
+      value: -20.999947
       objectReference: {fileID: 0}
     - target: {fileID: 224898817411491850, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 224195356886387530, guid: 023a83393e41825428449296479ef621,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -95.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224195356886387530, guid: 023a83393e41825428449296479ef621,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -20.799973
-      objectReference: {fileID: 0}
-    - target: {fileID: 224952385009129294, guid: 023a83393e41825428449296479ef621,
-        type: 2}
-      propertyPath: m_AnchoredPosition.x
-      value: -72.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224952385009129294, guid: 023a83393e41825428449296479ef621,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: 2.2
-      objectReference: {fileID: 0}
     - target: {fileID: 224991607901699130, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -117.699936
+      value: -107.000015
       objectReference: {fileID: 0}
     - target: {fileID: 224045959986735122, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -94.69994
+      value: -84
+      objectReference: {fileID: 0}
+    - target: {fileID: 224952385009129294, guid: 023a83393e41825428449296479ef621,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -61
+      objectReference: {fileID: 0}
+    - target: {fileID: 224195356886387530, guid: 023a83393e41825428449296479ef621,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -84
       objectReference: {fileID: 0}
     - target: {fileID: 224991607901699130, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 1.500025
+      value: 2.0000758
       objectReference: {fileID: 0}
     - target: {fileID: 224045959986735122, guid: 023a83393e41825428449296479ef621,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 23.500027
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 224952385009129294, guid: 023a83393e41825428449296479ef621,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224195356886387530, guid: 023a83393e41825428449296479ef621,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 224952385009129294, guid: 023a83393e41825428449296479ef621,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 023a83393e41825428449296479ef621, type: 2}
   m_IsPrefabParent: 0
---- !u!224 &985601324 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 224898817411491850, guid: 023a83393e41825428449296479ef621,
-    type: 2}
-  m_PrefabInternal: {fileID: 985601323}
 --- !u!1 &1080835649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3058,6 +3361,7 @@ RectTransform:
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children:
   - {fileID: 1594046846}
+  - {fileID: 1294920}
   - {fileID: 563265647}
   - {fileID: 269614113}
   - {fileID: 1888073554}
@@ -3427,7 +3731,7 @@ RectTransform:
   - {fileID: 771081414}
   - {fileID: 1670894696}
   m_Father: {fileID: 1080835650}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -3582,7 +3886,7 @@ Prefab:
     - target: {fileID: 114381413339181742, guid: 7fcf60811fe4192439281425f831f407,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 114337830643217206, guid: 7fcf60811fe4192439281425f831f407,
         type: 2}
@@ -3647,7 +3951,7 @@ RectTransform:
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 1080835650}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3811,6 +4115,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1424620721}
+  - {fileID: 816484403}
   m_Father: {fileID: 1099642920}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4419,7 +4724,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1080835650}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4531,9 +4836,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Rye bread\r\n\r\nRye bread is the most famous Latvian dark bread. According
-    to the view of locals, proper rye-bread can only be made in Latvia and eating
-    bread is not only a physical act, but a spiritual one."
+  m_Text: "Rye bread\r\n\r\nR\xE5gbr\xF6d \xE4r det mest k\xE4nda lettiska m\xF6rka
+    br\xF6det. Enligt lokalbefolkningens uppfattning kan r\xE4tt sorts r\xE5gbr\xF6d
+    gr\xE4ddas endast i Lettland och att \xE4ta br\xF6det \xE4r inte bara en fysisk
+    men ocks\xE5 en andlig akt."
 --- !u!222 &1424620723
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4598,7 +4904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d513895771a94dd4d8db56515f87f0e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StarObject: {fileID: 1562512932}
+  StarObject: {fileID: 0}
   StarPrefab: {fileID: 0}
   FinalResult: {fileID: 0}
 --- !u!114 &1445493461
@@ -4612,11 +4918,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710e0c5ec4925964c9877cda7d7ecc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1562512932 stripped
+--- !u!1 &1563105866
 GameObject:
-  m_PrefabParentObject: {fileID: 1020537393753854, guid: 023a83393e41825428449296479ef621,
-    type: 2}
-  m_PrefabInternal: {fileID: 985601323}
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1563105867}
+  - component: {fileID: 1563105869}
+  - component: {fileID: 1563105868}
+  m_Layer: 5
+  m_Name: Handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1563105867
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1563105866}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 583854457}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0.6267281}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 20, y: 20}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1563105868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1563105866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.322}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &1563105869
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1563105866}
 --- !u!1 &1594046845
 GameObject:
   m_ObjectHideFlags: 0
@@ -4627,6 +4996,8 @@ GameObject:
   - component: {fileID: 1594046846}
   - component: {fileID: 1594046848}
   - component: {fileID: 1594046847}
+  - component: {fileID: 1594046850}
+  - component: {fileID: 1594046849}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -4645,6 +5016,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1645033811}
+  - {fileID: 1929341175}
   m_Father: {fileID: 1080835650}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4686,6 +5058,49 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1594046845}
+--- !u!114 &1594046849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594046845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1200242548, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowMaskGraphic: 1
+--- !u!114 &1594046850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1594046845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1367256648, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Content: {fileID: 1645033811}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 1
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 0}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 1294921}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.ScrollRect+ScrollRectEvent, UnityEngine.UI, Version=1.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &1594775594
 GameObject:
   m_ObjectHideFlags: 0
@@ -4786,7 +5201,7 @@ RectTransform:
   m_Children:
   - {fileID: 399840630}
   m_Father: {fileID: 1080835650}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -4900,7 +5315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b407c7957f19c6489f3f59faaab0dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameobject: {fileID: 399840629}
+  gameobject: {fileID: 0}
 --- !u!114 &1600762537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5069,8 +5484,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -4}
-  m_SizeDelta: {x: 0, y: -8}
+  m_AnchoredPosition: {x: 0, y: -340}
+  m_SizeDelta: {x: 0, y: 680}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1645033812
 MonoBehaviour:
@@ -5104,19 +5519,21 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\xB7 Riga Black Balsam\r\n\r\nTraditional Latvian balsam is made with many
-    different natural ingredients mixed in pure vodka. The traditional recipe is based
-    on a composition of 24 different plants, flowers, buds, juices, roots, oils and
-    berries prepared in oak barrels and is famous for containing 24 herbal ingredients
-    which make the drink specifically healthy and aromatic. Riga black balsam is black
-    and has a bitter-sweet taste. It is rarely taken in its pure form, rather added
-    to coffee or tea. It can also be used in medicine as a cold remedy.\r\n\r\n* A
-    bottle of balsamico, glass on the side, a little salad on the plate\r\n\r\n* Bottle
-    of dark beer, \n\r\n* A bottle of light coloured beer, \n\r\n* Riga black balsam,
-    \n\r\n2.   J\u0101\u0146i cheese\r\n\r\nLatvian sour milk cheese. Traditionally
-    eaten on the Latvian celebration of the summer solstice. Basic ingredients are
-    raw quark and fresh milk, caraway seeds are traditionally added during cooking
-    as a spice. It is eaten as such or is used as a great snack to beer."
+  m_Text: "\xB7 Riga Black Balsam\r\n\r\nTraditionell lettisk balsam framst\xE4lls
+    av m\xE5nga olika naturliga ingredienser blandade i ren vodka. Det traditionella
+    receptet baserar sig p\xE5 en komposition av 24 olika v\xE4xter, blommor, knoppar,
+    juice, r\xF6tter, oljor och b\xE4r. Balsamet g\xF6rs i ekfat och \xE4r k\xE4nt
+    f\xF6r att inneh\xE5lla 24 v\xE4xtbaserade ingredienser som g\xF6r drickan s\xE4rskilt
+    frisk och aromatisk. Riga svart balsam \xE4r svart och har en bitter s\xF6t smak.
+    Man dricker s\xE4llan svart balsam som s\xE5dant utan hellre blandat i kaffe eller
+    i te. Det kan ocks\xE5 anv\xE4ndas i medicin som ett kylningsmedel.\n\r\n* A bottle
+    of balsamico, glass on the side, a little salad on the plate\r\n\r\n* Bottle of
+    dark beer, \n\r\n* A bottle of light coloured beer, \n\r\n* Riga black balsam,
+    \n\r\n2.   J\u0101\u0146i cheese\r\n\r\nLettisk sur mj\xF6lkost. Traditionellt
+    \xE4ter man mj\xF6lkost p\xE5 den lettiska sommarsolst\xE5ndsfesten. De grundl\xE4gggande
+    ingresienserna \xE4r r\xE5 kvark och f\xE4rsk mj\xF6lk samt kargenfr\xF6n som
+    traditionellt tillsattes som en krydda under kokning. Man \xE4ter osten som s\xE5dant
+    eller som ett bra mellanm\xE5l med \xF6l."
 --- !u!222 &1645033813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5444,16 +5861,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 24525352}
     m_Modifications:
-    - target: {fileID: 114374926969600500, guid: 042ec81fb2eb18249b18049782ad1405,
-        type: 2}
-      propertyPath: m_Delegates.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114374926969600500, guid: 042ec81fb2eb18249b18049782ad1405,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 224410768002224766, guid: 042ec81fb2eb18249b18049782ad1405,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -5574,52 +5981,6 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: -8
       objectReference: {fileID: 0}
-    - target: {fileID: 114374926969600500, guid: 042ec81fb2eb18249b18049782ad1405,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[2].eventID
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 114374926969600500, guid: 042ec81fb2eb18249b18049782ad1405,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1445493458}
-    - target: {fileID: 114374926969600500, guid: 042ec81fb2eb18249b18049782ad1405,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: next
-      objectReference: {fileID: 0}
-    - target: {fileID: 114374926969600500, guid: 042ec81fb2eb18249b18049782ad1405,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114374926969600500, guid: 042ec81fb2eb18249b18049782ad1405,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 114374926969600500, guid: 042ec81fb2eb18249b18049782ad1405,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114374926969600500, guid: 042ec81fb2eb18249b18049782ad1405,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[2].callback.m_TypeName
-      value: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI, Version=1.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      objectReference: {fileID: 0}
-    - target: {fileID: 114374926969600500, guid: 042ec81fb2eb18249b18049782ad1405,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 18
-      objectReference: {fileID: 0}
-    - target: {fileID: 114374926969600500, guid: 042ec81fb2eb18249b18049782ad1405,
-        type: 2}
-      propertyPath: m_Delegates.Array.data[2].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Latvia
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 042ec81fb2eb18249b18049782ad1405, type: 2}
   m_IsPrefabParent: 0
@@ -5628,7 +5989,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 24525352}
+    m_TransformParent: {fileID: 1959652008}
     m_Modifications:
     - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
         type: 2}
@@ -5648,17 +6009,17 @@ Prefab:
     - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
         type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
         type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
         type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
         type: 2}
@@ -5668,17 +6029,17 @@ Prefab:
     - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
         type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 1903
+      value: 378.80774
       objectReference: {fileID: 0}
     - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -401
+      value: 572.5001
       objectReference: {fileID: 0}
     - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
         type: 2}
@@ -5778,6 +6139,21 @@ Prefab:
     - target: {fileID: 1146000836106962, guid: 684cf6e90f1aa7542ad617af23800021, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1.8874164
+      objectReference: {fileID: 0}
+    - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.8750092
+      objectReference: {fileID: 0}
+    - target: {fileID: 224451307994572586, guid: 684cf6e90f1aa7542ad617af23800021,
+        type: 2}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 684cf6e90f1aa7542ad617af23800021, type: 2}
@@ -5886,7 +6262,7 @@ RectTransform:
   m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 1080835650}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6022,6 +6398,92 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 710e0c5ec4925964c9877cda7d7ecc5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1929341174
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1929341175}
+  - component: {fileID: 1929341177}
+  - component: {fileID: 1929341176}
+  m_Layer: 5
+  m_Name: Text (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1929341175
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929341174}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9999925, y: 0.9999925, z: 0.9999925}
+  m_Children: []
+  m_Father: {fileID: 1594046846}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -4.0000305}
+  m_SizeDelta: {x: 0, y: -8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1929341176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929341174}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 2b75e6f42c245e94d9914ad08d4620a1, type: 3}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\xB7 Riga Black Balsam\r\n\r\nTraditional Latvian balsam is made with many
+    different natural ingredients mixed in pure vodka. The traditional recipe is based
+    on a composition of 24 different plants, flowers, buds, juices, roots, oils and
+    berries prepared in oak barrels and is famous for containing 24 herbal ingredients
+    which make the drink specifically healthy and aromatic. Riga black balsam is black
+    and has a bitter-sweet taste. It is rarely taken in its pure form, rather added
+    to coffee or tea. It can also be used in medicine as a cold remedy.\r\n\r\n* A
+    bottle of balsamico, glass on the side, a little salad on the plate\r\n\r\n* Bottle
+    of dark beer, \n\r\n* A bottle of light coloured beer, \n\r\n* Riga black balsam,
+    \n\r\n2.   J\u0101\u0146i cheese\r\n\r\nLatvian sour milk cheese. Traditionally
+    eaten on the Latvian celebration of the summer solstice. Basic ingredients are
+    raw quark and fresh milk, caraway seeds are traditionally added during cooking
+    as a spice. It is eaten as such or is used as a great snack to beer."
+--- !u!222 &1929341177
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1929341174}
 --- !u!1 &1938124911
 GameObject:
   m_ObjectHideFlags: 0
@@ -6219,6 +6681,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1665981635}
+  - {fileID: 1389603564}
   m_Father: {fileID: 1099642920}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6272,7 +6735,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 18
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: Latvia
           m_BoolArgument: 0
@@ -6381,7 +6844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b407c7957f19c6489f3f59faaab0dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameobject: {fileID: 1665981634}
+  gameobject: {fileID: 0}
 --- !u!1 &2058973692 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1844932345288524, guid: deaa67e17dc932b43a3a2949b214cb68,
